@@ -19,7 +19,7 @@ $sec = "300";
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
         <title><?php echo "$title"; ?></title>
-	<meta name="description" content="<?php echo '$description'; ?>">
+	<meta name='description' content='<?php echo $description; ?>'>
 
 	<meta name="author" content="Erreur32">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -163,7 +163,6 @@ $sec = "300";
 										</h3>
 										<h5><span style="color:grey;"><?php  echo " $namemap" ?>  </span></h5>
 											<span class="label label-<?php echo $Timer > 1.0 ? 'danger' : 'success'; ?>"><?php echo $Timer; ?>s</span>
-											<br><small>(-ToX-)    <?php //echo  $urlserv; ?>  <?php //echo count($objlower); ?></small>
 
 									</div>
 
