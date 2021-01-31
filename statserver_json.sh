@@ -44,14 +44,6 @@ DB_NAME=""
 # ls ${statserver}
 ########################
 
-if [ ! -r "$statserver" ]; then
-    echo " ⛔Error:"${statserver}" doesn't exits"
-    exit 1
-#else
-#echo -e "$statserver exist"
-fi
-
-
 if [ -d ${pathd}/${varMod} ]
 then
     echo " ✅ Directory ${pathd}/${varMod}  exist!"
@@ -59,10 +51,17 @@ else
     mkdir -p ${pathd}/${varMod}
     echo " ✅ Directory ${pathd}/${varMod} CREATED  ✅"
 fi
+exit 1
+
+if [ ! -r "$statserver" ]; then
+    echo " ⛔Error:"${statserver}" doesn't exits"
+    exit 1
+fi
 
 
 exit 1
 
+##########################  not use 
 
 insert_mysql_down() {
 numplayers="0"
