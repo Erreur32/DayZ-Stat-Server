@@ -25,7 +25,7 @@ include_once('config.php');
 
 <body>
 
-<h3>☠  Players on  <?php echo $namemap ;?>  (-ToX-)</h3>
+<h3>☠  Players on  <?php echo $namemap ;?></h3>
 <div id="graph32"></div>
 
 <script>
