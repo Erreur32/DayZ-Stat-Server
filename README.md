@@ -1,12 +1,17 @@
 # Hi Survivor !!
 
+![https://dayz.echosystem.fr](https://git.echosystem.fr/repo-avatars/191)
+
+
 
 *Little Stat for Dayz Standalone server.*
 
 
  - Rquire Omega (to check mod only) 
 
- - Requie mysql database (to store status server for graph) 
+ - Optional   mysql database (to store status server for graph) 
+
+ - Optional
 >     check  statserver_json.sh  file and put in crontab like this
 >      */5 * * * *       /bin/bash /your/path/statserver_json.sh &>/dev/null 
 
@@ -14,7 +19,6 @@
 
 
 
-And it's should work
 
 sample: [example](https://dayz.echosystem.fr/server/Namalsk2)
 
