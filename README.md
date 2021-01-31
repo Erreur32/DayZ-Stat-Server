@@ -11,7 +11,8 @@
 >      */5 * * * *       /bin/bash /your/path/statserver_json.sh &>/dev/null 
 
  - You need to set
->   your `ip` , `port` , `query` and `omega server port mod` in `config.php`
+ 
+   your `ip` , `port` , `query` and `omega server port mod` in `config.php`
 
 
  STILL in Devlopment ...
