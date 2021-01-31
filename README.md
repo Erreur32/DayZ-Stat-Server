@@ -16,7 +16,8 @@
 
 And it's should work
 
-sample:  [https://dayz.echosystem.fr/server/Namalsk2](dayz.echosystem.fr/server/)/
+sample: [example](https://dayz.echosystem.fr/server/Namalsk2)
+
 
 ... STILL in Devlopment ...
 
