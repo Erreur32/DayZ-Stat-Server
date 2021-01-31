@@ -430,7 +430,7 @@ $sec = "300";
 																					</label>
 																				</div>
 																			<div class="col-sm-7"><i class="fas	fa-dot-circle"	style="color:#20a8d8"></i>
-																				 // not ready yet
+																				  SQL not active <font color=orange>// Function not ready</font>
 																				</div>
 																			</div>
 																		</div>
@@ -519,7 +519,7 @@ $sec = "300";
 														<div class="card">
 															<div class="card-header">Player last 24	hours</div>
 																<div class="card-body">
-																need sql  // not ready yet
+																<!--   // not ready yet -->
 																 <?php    include('./GraphPlayer.php'); ?>
 															</div>
 	                                                                                                        </div>
