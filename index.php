@@ -510,7 +510,7 @@ $sec = "300";
 															<div class="card-header">Player last 24	hours</div>
 																<div class="card-body">
 																need sql  // not ready yet
-																 <?php     include('./GraphPlayer.php'); ?>
+																 <?php    include('./GraphPlayer.php'); ?>
 															</div>
 	                                                                                                        </div>
 													</div>
@@ -674,16 +674,15 @@ $sec = "300";
 	 </div>
 	</footer>
 
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="./bootstrap.min.js"></script>
         <script src="./graph_loader.js"></script>
         <script src="js/switch.js"></script>
 	<!-- menu deroulant -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/9ba5e91dd6.js" crossorigin="anonymous"></script>
-<!--
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
--->
+
 	<style>
 		.tab-content {
 			margin-top: -1px;

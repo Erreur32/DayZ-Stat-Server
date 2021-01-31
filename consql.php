@@ -3,8 +3,10 @@
         $userdb = "";
         $pdb    = "";
         $dbname = "";
+	$table  = "StatServer_20"; 
 
-   $con = new mysqli($servdb, $userdb, $pdb, $dbname);
+     $StatServer = $table;
+     $con = new mysqli($servdb, $userdb, $pdb, $dbname);
 
     if ($con->connect_error) {
     //       die("Connection failed: " . $con->connect_error);

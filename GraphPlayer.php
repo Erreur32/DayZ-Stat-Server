@@ -1,27 +1,29 @@
 <?php
 
-ini_set('display_errors', 'on');
+//ini_set('display_errors', 'on');
+
 include('./consql.php');
 include_once('config.php');
-$StatServer = "StatServer_20";
+
+// MYSQL table
+
+	// $StatServer = "StatServer_20"; // set in consql.php
 
      $queryP = "SELECT date, numplayers FROM ".$StatServer."   ORDER BY id DESC  LIMIT 80";
      $arrPlay = $con->query($queryP);
 
 ?>
 
-<!doctype html>
 <head>
-  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
-    <script src="morris/morris.js"></script>
-  <!--link rel="stylesheet" href="lib/example.css"-->
+
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.css">
+    <script src="morris/morris.js"></script>
     <link rel="stylesheet" href="morris/morris.css">
 </head>
-<body>
 
+<body>
 
 <h3>☠  Players on  <?php echo $namemap ;?>  (-ToX-)</h3>
 <div id="graph32"></div>
@@ -44,4 +46,4 @@ hideHover:'auto'
 </script>
 
 </body>
-</html>
+
