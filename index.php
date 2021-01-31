@@ -278,9 +278,6 @@ $sec = "300";
                                                                                                         <i class="fas fa-user-check"></i> User  Database</a>
                                                                                         </li>
 
-										<li class="nav-item"> <a class="nav-link" id="history-tab"  data-toggle="tab"  href="#historytab" role="tab" aria-controls="historytab" aria-selected="false">
-                                                                                                       <i class="fas fa-info"></i>  🅷 🅸 🆂 🆃 🅾 🆁 🆈  ️ </a>
-                                                                                        </li>
 
 										 <li class="nav-item"> <a class="nav-link" id="map-tab" data-toggle="tab"  href="#maptab" role="tab" aria-controls="maptab" aria-selected="false">
                                                                                                 <i class="fas fa-map"></i>  MAP</a>
@@ -610,8 +607,6 @@ $sec = "300";
 														<div class="card">
 															<div class="card-header">Player population   24	hours</div>
 															<div class="card-body"><br>
-															 <!--  <iframe src="graph.php" frameborder="0" allowfullscreen scrolling="no" 
-															           style="margin:auto;width:100%;height:395px;" security="restricted"></iframe> -->
 															<?php //  include('graph.php'); ?>
 
 															</div>
@@ -646,29 +641,14 @@ $sec = "300";
 											</div>
 											 
 
-								<!--  HISTORY List  -->
-											
-											<div class="tab-pane tab_content fade"  id="historytab" role="tabpanel" aria-labelledby="history-tab">
-												<div class="col-lg-12 col-sm-12">
-													<div class="card">
-														<div class="card-header" style="padding: 15px;"> <i class="fas fa-search"></i> Namalsk Island  </div>
-									<div style="padding:15px;">
-									<img src="https://dayz.echosystem.fr/server/Namalsk/image_ico.png"  alt="Namalsk island"  style="width:100%;max-width:800px;max-height:450px;height:auto;"  class="arrondie2 ban">
-														<?php  include('info.php'); ?>
-									</div>
-													</div>
-												</div>
-											</div>
-											
 
                                                                 <!--  MAP tab  -->
 
                                                                                         <div class="tab-pane tab_content fade"  id="maptab" role="tabpanel" aria-labelledby="map-tab">
                                                                                                 <div class="col-lg-12 col-sm-12">
                                                                                                         <div class="card">
-                                                                                                                <div class="card-header" style="padding: 15px;"> <i class="fas fa-map"></i> Namalsk Island  </div>
-			                                	                                                      <a href="https://dayz.echosystem.fr/server/Namalsk/namalsk_map2.png">
-<!--											<img src="https://dayz.echosystem.fr/server/Namalsk/namalsk_map2.png" style="width:100%;max-width:1200px;height:auto;padding:5px;" class="arrondie2"></a>-->
+                                                                                                                <div class="card-header" style="padding: 15px;"> <i class="fas fa-map"></i>  MAP  </div>
+                               	                                                      <a href="https://dayz.echosystem.fr/server/Namalsk/namalsk_map2.png">
 											<img src="https://dayz.echosystem.fr/server/Namalsk/namalsk_map_hd.png" style="width:100%;max-width:1200px;height:auto;padding:5px;" class="arrondie2"></a>
                                                                                                         </div>
                                                                                                 </div>
