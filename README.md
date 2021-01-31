@@ -10,12 +10,13 @@
 >     check  statserver_json.sh  file and put in crontab like this
 >      */5 * * * *       /bin/bash /your/path/statserver_json.sh &>/dev/null 
 
- - You need to set
- 
-   your `ip` , `port` , `query` and `omega server port mod` in `config.php`
+ - Set  your `ip` , `port` , `query` and `omega server port mod` in `config.php`
 
 
- STILL in Devlopment ...
+
+And it's should work
+
+... STILL in Devlopment ...
 
 
 
