@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <?php
 $page = $_SERVER['PHP_SELF'];
 $sec = "300";
@@ -5,10 +7,7 @@ $sec = "300";
  include_once('./consql.php');
  include_once('./config.php');
 
-
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
 	<meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
@@ -166,7 +165,7 @@ $sec = "300";
                 setlocale(LC_ALL,'french');
                 echo "<center><small class='text-muted'>Last refresh</small> <br>  <strong class='h4'>".date('m/d/y H:i:s')."</strong></center>";
                 echo "<div style=\"padding-bottom: 10%;padding-left: 20%;padding-right: 20%\"> <center><img src=\"https://steamuserimages-a.akamaihd.net/ugc/1649972925761363590/C3DC3BB6880B659518D19ECDA9610C424794EBB8/\" class=\"arrondie2\"   width=\"100%\" max-height=\"20%\" height=\"auto\"></center></div></div>";
-//               include('footer.php');
+//      include('footer.php');
                 exit;
 
                 }
@@ -377,8 +376,8 @@ $sec = "300";
 																					</label>
 																				</div>
 																				<div class="col-sm-7">
-																		 <a	href="#"><?php echo  $ipserv; ?></a><br>
-																			 <a     href="#"><?php echo  $portserv; ?></a>
+																		         	<a  href="#"><?php echo  $ipserv;   ?></a><br>
+																			 	<a  href="#"><?php echo  $portserv; ?></a>
 																				</div>
 																			</div>
 																		</div>	
@@ -511,7 +510,7 @@ $sec = "300";
 															<div class="card-header">Player last 24	hours</div>
 																<div class="card-body">
 																need sql  // not ready yet
-																 <?php  //   include('./GraphPlayer.php'); ?>
+																 <?php     include('./GraphPlayer.php'); ?>
 															</div>
 	                                                                                                        </div>
 													</div>
@@ -677,13 +676,14 @@ $sec = "300";
 
         <script src="./bootstrap.min.js"></script>
         <script src="./graph_loader.js"></script>
-
+        <script src="js/switch.js"></script>
 	<!-- menu deroulant -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/9ba5e91dd6.js" crossorigin="anonymous"></script>
-
+<!--
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+-->
 	<style>
 		.tab-content {
 			margin-top: -1px;
