@@ -738,7 +738,7 @@ $sec = "300";
 
         <script src="./bootstrap.min.js"></script>
         <script src="./graph_loader.js"></script>
-
+	<script type="text/javascript" src="tabcontent.js"></script>
 <!-- menu deroulant 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
 
