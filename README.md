@@ -16,7 +16,10 @@
 
 And it's should work
 
+sample:  [https://dayz.echosystem.fr/server/Namalsk2](dayz.echosystem.fr/server/)/
+
 ... STILL in Devlopment ...
+
 
 
 
