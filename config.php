@@ -14,19 +14,19 @@
      //   Don't touch below
 
                 $urlserv = $ipserv.":".$portserv ;
+		// need to fix if mod = 0 
                 $json = file_get_contents('http://'.$ipserv.':'.$modport.'/');
                 $objhigher=json_decode($json); //converts to an object
-                $objlower = $objhigher[0]; // if the json response its multidimensional this lowers it
-                $objlower=json_decode($json); //converts to an array of objects
+                $objlower = $objhigher[0];     // if the json response its multidimensional this lowers it
+                $objlower=json_decode($json);  //converts to an array of objects
 
 
 
-
-	// librarie SQ - info serv game
+     // librarie SQ - info serv game
         require  'SQ_/bootstrap.php';
         use xPaw\SourceQuery\SourceQuery;
 
-        define( 'SQ_SERVER_ADDR', "${ipserv}" );   // IP server
+        define( 'SQ_SERVER_ADDR', "${ipserv}" );     // IP server
         define( 'SQ_SERVER_PORT', "${queryport}" );  // YOUR QUERY PORT
         define( 'SQ_TIMEOUT',     3 );
         define( 'SQ_ENGINE',      SourceQuery::SOURCE );

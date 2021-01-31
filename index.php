@@ -436,7 +436,7 @@ $sec = "300";
 																					</label>
 																				</div>
 																				<div class="col-sm-7"><i class="fas	fa-dot-circle"	style="color:#20a8d8"></i>
-																				 800m <small> by </small> <span class="badge badge-light"> Terror_east</span>
+																				 // not ready set
 																				</div>
 																			</div>
 																		</div>
@@ -714,14 +714,7 @@ $sec = "300";
 	<footer class="app-footer">
 
 	<div style="text-align:center;"> <span style="text-align:center;"> © 2020 (-ToX-) - <a href="https://git.echosystem.fr/Erreur32/DayZ-Stat-Server">Dayz-server-stats</a> by  <a href="">Erreur32</a> </span>
-<!--                     <div class="dark_" style="text-align: right;padsding-right: 10px;padding-top: 15px;color: grey;" title="Dark Mode">
-                        <form action="#">
-                            <div class="switch">
-                              <input  id="darkTrigger" type="checkbox" class="switch-input" />
-                              <label for="darkTrigger" class="switch-label" ></label>
-                            </div>
-                        </form>
-                       </div>-->
+
 	 </div>
 
 	<div class="ml-auto"> 
@@ -736,13 +729,13 @@ $sec = "300";
 	 </div>
 	</footer>
 
-        <script src="./bootstrap.min.js"></script>
-        <script src="./graph_loader.js"></script>
+        <script src="bootstrap.min.js"></script>
+        <script src="graph_loader.js"></script>
 	<script type="text/javascript" src="tabcontent.js"></script>
-<!-- menu deroulant 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+	<!-- menu deroulant -->
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
- <script src="https://kit.fontawesome.com/9ba5e91dd6.js" crossorigin="anonymous"></script>
+	 <script src="https://kit.fontawesome.com/9ba5e91dd6.js" crossorigin="anonymous"></script>
 
 	<style>
 		.tab-content {
@@ -838,6 +831,11 @@ $sec = "300";
     }
  });
  </script>
+
+
+<!--<link rel="stylesheet" href="https://dayz.echosystem.fr/bootstrap.min.unminify.css"  crossorigin="anonymous">-->
+<!--<link href="https://dayz.echosystem.fr/main.css" rel="stylesheet">-->
+
 
 
 
