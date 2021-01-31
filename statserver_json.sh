@@ -21,9 +21,9 @@ IpGame=""
 PortGame=""
 QueryGame=""
 
-CHECKstatserver="/tmp/CHECKstatserver_${varMod}.json"
-statserver="${pathd}/${varMod}/statserver_${varMod}.json"
-gameqjson="${pathd}/${varMod}/gameqjson_${varMod}.json"
+#CHECKstatserver="/tmp/CHECKstatserver_${varMod}.json"
+statserver="${pathd}/${varMod}/statserver.json"
+gameqjson="${pathd}/${varMod}/gameqjson.json"
 
 ####### don't touch below #####
 # (will change in future update)
@@ -35,7 +35,7 @@ pathDBe="${pathd}/${varMod}"
 datesql=$(date +'%F %T')
 date=$(date +'%F %T')
 
-TABLE2=""
+TABLE=""
 DB_USER=""
 DB_PASSWD=""
 DB_NAME=""
@@ -69,7 +69,7 @@ players="0"
 ping="0"
 mysql --user=$DB_USER --password=$DB_PASSWD --database=$DB_NAME << EOF
  SET NAMES utf8;
- insert into $TABLE2 (\`date\`,\`name\`,\`game\`,\`map\`,\`version\`,\`requiredVersion\`,\`numplayers\`,\`players\`,\`maxplayers\`,\`ping\`,\`timeserver\`,\`hive\`,\`battleye\`,\`connect\`,\`secure\`) VALUES ("$datesql","OFFLINE","$game","$map","$version","$requiredVersion","$numplayers","$players","$maxplayers","$ping","$timeserver","$hive","$battleye","$connect","$secure");
+ insert into $TABLE (\`date\`,\`name\`,\`game\`,\`map\`,\`version\`,\`requiredVersion\`,\`numplayers\`,\`players\`,\`maxplayers\`,\`ping\`,\`timeserver\`,\`hive\`,\`battleye\`,\`connect\`,\`secure\`) VALUES ("$datesql","OFFLINE","$game","$map","$version","$requiredVersion","$numplayers","$players","$maxplayers","$ping","$timeserver","$hive","$battleye","$connect","$secure");
 
 EOF
 }
@@ -139,7 +139,7 @@ echo " Debug: $numplayers"
 insert_mysql() {
 mysql --user=$DB_USER --password=$DB_PASSWD --database=$DB_NAME << EOF
  SET NAMES utf8;
- insert into $TABLE2 (\`date\`,\`name\`,\`game\`,\`map\`,\`version\`,\`requiredVersion\`,\`numplayers\`,\`players\`,\`maxplayers\`,\`ping\`,\`timeserver\`,\`hive\`,\`battleye\`,\`connect\`,\`secure\`) VALUES ("$datesql","$name","$game","$map","$version","$requiredVersion","$numplayers","$players","$maxplayers","$ping","$timeserver","$hive","$battleye","$connect","$secure");
+ insert into $TABLE (\`date\`,\`name\`,\`game\`,\`map\`,\`version\`,\`requiredVersion\`,\`numplayers\`,\`players\`,\`maxplayers\`,\`ping\`,\`timeserver\`,\`hive\`,\`battleye\`,\`connect\`,\`secure\`) VALUES ("$datesql","$name","$game","$map","$version","$requiredVersion","$numplayers","$players","$maxplayers","$ping","$timeserver","$hive","$battleye","$connect","$secure");
 
 EOF
 }
