@@ -2,8 +2,8 @@
 $page = $_SERVER['PHP_SELF'];
 $sec = "300";
 
-//              include_once('./consql.php');
-                include_once('./config.php');
+ include_once('./consql.php');
+ include_once('./config.php');
 
 
 ?>
@@ -11,22 +11,16 @@ $sec = "300";
 <html lang="en">
 
 <head>
-	 <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
-
+	<meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
         <title><?php echo "$title"; ?></title>
-	<meta name='description' content='<?php echo $descript; ?>'>
-
+	<meta name='description' content='<?php echo "$descript"; ?>'>
 	<meta name="author" content="Erreur32">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<meta name="keyword" content="tox,server,dayz,map,namalsk,namalsk island">
-
-
-	<link id="theme-style" href="style_dark.css" rel="stylesheet">
+	<link id="theme-style" href="./style_dark.css" rel="stylesheet">
 
 	<style>
 		.tab-content {
@@ -170,9 +164,9 @@ $sec = "300";
 	        if (empty($Info['Map']))  {
 		echo "</main>";
                 setlocale(LC_ALL,'french');
-                echo "<center><small class='text-muted'>Last time refresh</small> <br>  <strong class='h4'>".date('m/d/y H:i:s')."</strong></center>";
+                echo "<center><small class='text-muted'>Last refresh</small> <br>  <strong class='h4'>".date('m/d/y H:i:s')."</strong></center>";
                 echo "<div style=\"padding-bottom: 10%;padding-left: 20%;padding-right: 20%\"> <center><img src=\"https://steamuserimages-a.akamaihd.net/ugc/1649972925761363590/C3DC3BB6880B659518D19ECDA9610C424794EBB8/\" class=\"arrondie2\"   width=\"100%\" max-height=\"20%\" height=\"auto\"></center></div></div>";
-               include('footer.php');
+//               include('footer.php');
                 exit;
 
                 }
@@ -236,7 +230,7 @@ $sec = "300";
 											
 											<div class="col-md-2 col-xs-12">
 												<div class="description-block">
-													<h5 class="description-header"><?php  echo $InfoGT[18].$InfoGT[19].$InfoGT[20].$InfoGT[21].$InfoGT[22].$InfoGT[23].$InfoGT[24].$InfoGT[25];  ?> 
+											<h5 class="description-header"><?php  echo $InfoGT[18].$InfoGT[19].$InfoGT[20].$InfoGT[21].$InfoGT[22].$InfoGT[23].$InfoGT[24].$InfoGT[25];  ?> 
 													</h5>
 													<span class="description-text">HIVE</span>
 												</div>
@@ -268,20 +262,14 @@ $sec = "300";
 													<i class="fas	fa-server"></i> MOD List</a>
 											</li>											
 											
-											<!--<li class="nav-item">
-												 <a class="nav-link" id="metrics-tab" data-toggle="tab"	href="#metrics" role="tab" aria-controls="metrics" aria-selected="false">
-													<i class="fas fa-chart-area"></i> Server Graph</a>
-											</li>-->
-
-											 <li class="nav-item">
+											<li class="nav-item">
                                                                                                  <a class="nav-link" id="userdata-tab"  data-toggle="tab" href="#userdata" role="tab" aria-controls="userdata" aria-selected="false">
                                                                                                         <i class="fas fa-user-check"></i> User  Database</a>
                                                                                         </li>
 
 
-										 <li class="nav-item"> <a class="nav-link" id="map-tab" data-toggle="tab"  href="#maptab" role="tab" aria-controls="maptab" aria-selected="false">
+											<li class="nav-item"> <a class="nav-link" id="map-tab" data-toggle="tab"  href="#maptab" role="tab" aria-controls="maptab" aria-selected="false">
                                                                                                 <i class="fas fa-map"></i>  MAP</a>
-
                                                                                         </li>
 
 										</ul>
@@ -304,7 +292,7 @@ $sec = "300";
 													<div class="col-lg-2 col-sm-5">
 														<div class="callout callout-light">
 															<small class="text-muted">Last time refresh</small> <br>
-													<strong class="h4">	<?php  setlocale(LC_ALL,'french'); echo  date("m/d/y H:i:s"); ?></span>	</strong>
+													<strong class="h4">	<?php  setlocale(LC_ALL,'french'); echo  date("m/d/y H:i:s"); ?>	</strong>
 															<div class="chart-wrapper">
 																<canvas id="sparkline-chart-1" width="100"	height="30"></canvas>
 															</div>
@@ -432,8 +420,8 @@ $sec = "300";
 																						<small>	From User</small-->
 																					</label>
 																				</div>
-																				<div class="col-sm-7"><i class="fas	fa-dot-circle"	style="color:#20a8d8"></i>
-																				 // not ready set
+																			<div class="col-sm-7"><i class="fas	fa-dot-circle"	style="color:#20a8d8"></i>
+																				 // not ready yet
 																				</div>
 																			</div>
 																		</div>
@@ -441,8 +429,7 @@ $sec = "300";
 
 																		
 																		<div class="row">
-																			<div class="form-check	form-check-inline"
-																				style="width: 100% !important;">
+																			<div class="form-check	form-check-inline" style="width: 100% !important;">
 																				<div class="col-sm-5">
 																					<label class="col-form-label" for="date-input">
 																						<strong>Mod information</strong>
@@ -451,8 +438,7 @@ $sec = "300";
 																				</div>
 																				<div class="col-sm-7">
 																				<a href="https://dayz.echosystem.fr/server/mod_namalsk2.php"><span class="badge badge-light">	
-																				<b><?php echo count($objlower); ?></b>
-																					<span class="text-muted"> Mods	</span></a>
+																				<b><?php echo count($objlower); ?></b>	<span class="text-muted"> Mods	</span></span></a>
 																				</div>
 																			</div>
 																		</div>
@@ -466,7 +452,7 @@ $sec = "300";
 																					</label>
 																				</div>
 																				<div class="col-sm-7">
-																						<a style="text-decoration:none;" href='steam://connect/82.64.214.194:3201/'>
+																					<a style="text-decoration:none;" href='steam://connect/82.64.214.194:3201/'>
 																							<span class='label label-success'> GO PLAY </span>
 																					 	</a>										
 																				</div>
@@ -484,8 +470,8 @@ $sec = "300";
 													</div>
 
 												
-													<!-- graph home page  -->
-													
+												<!-- graph home page  -->
+											
 													 <div class="col-lg-10 col-sm-16">
 													    <div class="card">
 
@@ -501,23 +487,20 @@ $sec = "300";
 																</tr>
 																</table>
 
-
-
 														                <?php endforeach; ?>
 
-
-                                                                                                        </div>
+			                                                                                                        </div>
 																<?php else: ?>											    		
               
 																  <div class="card-header">List players online: <?php echo  $Info['Players'] ; ?></div>
-                                                                                                                                <div class="card-body">
-								                                                            <tr>
-					                					                                        <td colspan="2"><center><span class="btn btn-large btn-primary">( No players in game )</span></center></td>			                          																</td>
-																               </div>
+                                                                                                                                   <div class="card-body">
+									                                                             <tr>
+					                					                                        <td colspan="2"><center><span class="btn btn-large btn-primary">( No players in game )</span></center></td>			                          															       </tr>
+																    </div>
 
 
 
-														<?php endif; ?>
+														    <?php endif; ?>
 														</div>
                                                                                                         </div>
 													
@@ -526,20 +509,13 @@ $sec = "300";
 													<div class="col-lg-12 col-sm-16">
 														<div class="card">
 															<div class="card-header">Player last 24	hours</div>
-															<div class="card-body">
-															need sql  // not ready yet
-														 <?php  //   include('./GraphPlayer.php'); ?>
+																<div class="card-body">
+																need sql  // not ready yet
+																 <?php  //   include('./GraphPlayer.php'); ?>
 															</div>
 	                                                                                                        </div>
 													</div>
-													 
-													<!--
-													<div class="col-lg-4 col-sm-4">
-														<div class="card_">
-														
-														</div>
-													</div>
-													-->
+
 												</div>
 
 											</div>
@@ -550,7 +526,7 @@ $sec = "300";
 
 											<div class="tab-pane tab_content fade" id="modlist" role="tabpanel"	aria-labelledby="modlist-tab">
 
-												<div class="row">
+				 								<div class="row">
 													<div class="col-lg-5 col-sm-12">
 
 														<div class="card">
@@ -598,10 +574,9 @@ $sec = "300";
 
 
 
-											<!--  tab  Metrics Graph   -->
+								<!--  tab  Metrics Graph   -->
 											 
 											<div class="tab-pane tab_content fade" id="metrics" role="tabpanel"	aria-labelledby="metrics-tab">
-
 												<div class="row">
 													<div class="col-lg-6 col-sm-8">
 														<div class="card">
@@ -617,8 +592,6 @@ $sec = "300";
                                                                                                                 <div class="card" style="margin: 0 auto;  height: 500px;  width: 100%;">
                                                                                                                         <div class="card-header"> line-chart </div>
                                                                                                                         <div class="card-body"><center>
-                                                                                                                      <!--   <iframe src="line-chart1.php" frameborder="0"
-                                                                                                                 allowfullscreen scrolling="no" style="overflow:hidden;width:100%;height:450px;" security="restricted"></iframe> -->
                                                                                                                         </center>
 
                                                                                                                         </div>
@@ -663,14 +636,16 @@ $sec = "300";
 														<div class="card-header"> <i class="fas fa-user-check"></i> User registered	</div>
 														
 														<div style="position:relative;padding-top:56.25%;">
-											                             	    <iframe src="Players" frameborder="0" allowfullscreen    style="position:absolute;top:0;left:0;width:100%;height:100%;" security="restricted"></iframe>
+
 													    	</div>
 
 													</div>
 												</div>
 											</div>
 
-											<!-- end tabs  -->
+
+
+								<!-- end tabs  -->
 
 										</div>
 									</div>
@@ -685,18 +660,9 @@ $sec = "300";
 
 
 
-		<!-- menu droite -->
-
-
-
-	<!--/div-->
-
 	<footer class="app-footer">
-
 	<div style="text-align:center;"> <span style="text-align:center;"> © 2020 (-ToX-) - <a href="https://git.echosystem.fr/Erreur32/DayZ-Stat-Server">Dayz-server-stats</a> by  <a href="">Erreur32</a> </span>
-
 	 </div>
-
 	<div class="ml-auto"> 
 		<?php
 			$time = microtime();
@@ -709,14 +675,15 @@ $sec = "300";
 	 </div>
 	</footer>
 
-        <script src="bootstrap.min.js"></script>
-        <script src="graph_loader.js"></script>
-	<script type="text/javascript" src="tabcontent.js"></script>
+        <script src="./bootstrap.min.js"></script>
+        <script src="./graph_loader.js"></script>
+
 	<!-- menu deroulant -->
-	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/9ba5e91dd6.js" crossorigin="anonymous"></script>
 
-	 <script src="https://kit.fontawesome.com/9ba5e91dd6.js" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
 	<style>
 		.tab-content {
 			margin-top: -1px;
@@ -811,12 +778,6 @@ $sec = "300";
     }
  });
  </script>
-
-
-<!--<link rel="stylesheet" href="https://dayz.echosystem.fr/bootstrap.min.unminify.css"  crossorigin="anonymous">-->
-<!--<link href="https://dayz.echosystem.fr/main.css" rel="stylesheet">-->
-
-
 
 
 

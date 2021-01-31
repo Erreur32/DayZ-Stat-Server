@@ -5,14 +5,15 @@
         $dbname = "";
 
    $con = new mysqli($servdb, $userdb, $pdb, $dbname);
+
     if ($con->connect_error) {
-        die("Connection failed: " . $con->connect_error);
+    //       die("Connection failed: " . $con->connect_error);
+	echo ("Connection failed with sql / need to set MYSQL");
     }
     else
     {
-        //echo ("Connect Successfully");
+      // echo ("Connect Successfully");
     }
-//    $query = "SELECT date, numplayers FROM StatServer"; // select column
-//    $aresult = $con->query($query);
+
 
 ?>
