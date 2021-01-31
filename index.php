@@ -1,6 +1,11 @@
 <?php
 $page = $_SERVER['PHP_SELF'];
 $sec = "300";
+
+//              include_once('./consql.php');
+                include_once('./config.php');
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,10 +17,12 @@ $sec = "300";
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<meta name="description" content="(-ToX-) server Namalsk Dayz standalone Fr, namalsk island, Discord https://discord.gg/MrtVHcE6mg" />
-        <title>(-ToX-) DAYZ Server EXPANSION Chernarus  FR/EN</title>
+
+        <title><?php echo "$title"; ?></title>
+	<meta name="description" content="<?php echo '$description'; ?>">
+
 	<meta name="author" content="Erreur32">
-	<link rel="shortcut icon" type="image/x-icon" href="https://dayz.echosystem.fr/favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<meta name="keyword" content="tox,server,dayz,map,namalsk,namalsk island">
 
 
@@ -126,8 +133,6 @@ $sec = "300";
 		$time = $time[1] + $time[0];
 		$start = $time;
 
-		include_once('./consql.php');
-		include_once('./config.php');
 
                 if (empty($Info['HostName']))  {
                 $Info['HostName'] = "<h1>OFF LINE</h1>" ;
@@ -526,7 +531,8 @@ $sec = "300";
 														<div class="card">
 															<div class="card-header">Player last 24	hours</div>
 															<div class="card-body">
-														 <?php    include('./GraphPlayer.php'); ?>
+															need sql  // not ready yet
+														 <?php  //   include('./GraphPlayer.php'); ?>
 															</div>
 	                                                                                                        </div>
 													</div>

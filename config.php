@@ -1,16 +1,15 @@
 <?php
 	        ini_set("allow_url_fopen", 1);
 
-		// map description ( need to change )
-		$namemap = "Namalsk Island";
-
      // Edit this ->
 
-                $ipserv   = "" ; // IP server game
-                $portserv = "" ; // Game Server Port
-		$modport  = "" ; // Mod port omega (+10)
-		$queryport= "" ; // Queryport 
-
+                $ipserv   = "103.58.149.102" ; // IP server game
+                $portserv = "2302" ; // Game Server Port
+		$modport  = "2312" ; // Mod port omega (+10)
+		$queryport= "27016" ; // Queryport 
+		$title    = "MY stat SERVER " ;   // Web title page
+		$descript = "Your crew desciption" ;
+                $namemap  = "MAP CHERNARUS"; // you can put what you want.
 
      //   Don't touch below
 
