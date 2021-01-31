@@ -10,45 +10,58 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/dayz/dat
 #  DELETE FROM `StatServer`;
 #  TRUNCATE TABLE StatServer
 #
-# mod info: vanilla, namalsk
-varMod="namalsk2"
 
-TABLE2=""
+# need to create the directory if dosen't exist an error will appear.
+pathd="/path/to/your/website"
+# create directory
+varMod="server1"
+
 # Game Port IP  mod
 IpGame=""
 PortGame=""
 QueryGame=""
 
-#######
+CHECKstatserver="/tmp/CHECKstatserver_${varMod}.json"
+statserver="${pathd}/${varMod}/statserver_${varMod}.json"
+gameqjson="${pathd}/${varMod}/gameqjson_${varMod}.json"
+
+####### don't touch below #####
 # (will change in future update)
-pathBin="/home/dayz/bin"
-pathDBe="/home/dayz/DataBase/${varMod}"
+# pathBin="/dayz/bin"
+pathDBe="${pathd}/${varMod}"
 
 #   NEED to SET
 # SQL
+datesql=$(date +'%F %T')
+date=$(date +'%F %T')
+
+TABLE2=""
 DB_USER=""
 DB_PASSWD=""
 DB_NAME=""
-
-
-datesql=$(date +'%F %T')
-date=$(date +'%F %T')
-CHECKstatserver="/tmp/CHECKstatserver_${varMod}.json"
-statserver="/home/dayz/DataBase/${varMod}/statserver_${varMod}.json"
-gameqjson="/home/dayz/DataBase/${varMod}/gameqjson_${varMod}.json"
 
 #DEBUG:
 # ls ${statserver}
 ########################
 
-
-if [ -d /home/dayz/DataBase/${varMod} ]
-then
-    echo " ✅ Directory /home/dayz/DataBase/${varMod}  exist!"
-else
-    mkdir -p /home/dayz/DataBase/${varMod}
-    echo " ✅ Directory /home/dayz/DataBase/${varMod} CREATED  ✅"
+if [ ! -r "$statserver" ]; then
+    echo " ⛔Error:"${statserver}" doesn't exits"
+    exit 1
+#else
+#echo -e "$statserver exist"
 fi
+
+
+if [ -d ${pathd}/${varMod} ]
+then
+    echo " ✅ Directory ${pathd}/${varMod}  exist!"
+else
+    mkdir -p ${pathd}/${varMod}
+    echo " ✅ Directory ${pathd}/${varMod} CREATED  ✅"
+fi
+
+
+exit 1
 
 
 insert_mysql_down() {
@@ -61,37 +74,6 @@ mysql --user=$DB_USER --password=$DB_PASSWD --database=$DB_NAME << EOF
 
 EOF
 }
-
-#nmapGame=`nmap  82.64.214.194 -p $PortGame | grep filtered`
-#[  -z "$nmapvar" ] && echo "Empty: Yes" || echo "Empty: No"
-#if [  -z "$nmapGame" ]
-
-nmapGame=`/usr/local/bin/gamedig --type dayz $IpGame:$QueryGame  > ${CHECKstatserver}`
-catCHECKstatserver=`cat ${CHECKstatserver}`
-if [[ "$catCHECKstatserver" ==  *error* ]]
-then
-       echo -e " ✅ Game is Down  | port  $PortGame closed! ⛔  "
-       insert_mysql_down && echo -e " ✅ Mysql Updated " || echo -e "\n !!!!!!!!!!!!!  Huston ,  MYSQL issue ⛔"
-#     echo -e "\n Mysql updated"
-exit 1
-else
-echo -e " ✅ Game is UP | port  $PortGame OPEN ✅ !\n"
-cp ${CHECKstatserver} ${statserver}
-
-#curl -s  https://dayz.echosystem.fr/server/responsibleTab/json.php > ${gameqjson}
-#cp ${gameqjson} /home/dayz/Dayz/server/
-#/usr/local/bin/gamedig --type dayz $IpGame:$QueryGame > ${statserver}
-
-
-if [ ! -r "$statserver" ]; then
-    echo " ⛔Error:"${statserver}" doesn't exits"
-    exit 1
-#else
-#echo -e "$statserver exist"
-fi
-
-cp ${statserver}  /home/dayz/Dayz/server/
-
 
 print_info() {
 echo -e "$name $map $password $game ($numplayers) $version $maxplayers $ping $connect $secure $requiredVersion $island [$players] $mod $hive $battleye $timeserver $speedtime $speedtimenight $timeLeft $secure" > $pathDBe/Info-all.txt
