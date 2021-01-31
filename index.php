@@ -203,10 +203,20 @@ $sec = "300";
 											<div class="col-md-2 col-xs-12 border-right">
 												<div class="">
 													<h5 class="description-header">
-														<?php  echo $InfoGT[67].$InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71];  ?> <small style="color: grey;"> <i
-																class="fas  fa-sun"></i><span style="color: white;">x<?php  echo $InfoGT[41];   ?></span>
-																- <i class="fas  fa-moon"></i><span	style="color: white;">x<?php  echo $InfoGT[54];   ?></span>
-																</small></h5>
+														
+														<?php  
+														      // if no mod
+															 echo $InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72];  ?> <small style="color: grey;">
+                                                                                                                        <i class="fas  fa-sun"></i><span style="color: white;">x<?php  echo $InfoGT[42];   ?></span>
+                                                                                                                        - <i class="fas  fa-moon"></i><span     style="color: white;">x<?php  echo $InfoGT[55];   ?></span>
+
+<!--														      // if mod active 
+															echo $InfoGT[67].$InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71];  ?> 
+															<small style="color: grey;"><i class="fas  fa-sun"></i><span style="color: white;">x<?php  echo $InfoGT[41];   ?></span>
+															- <i class="fas  fa-moon"></i><span	style="color: white;">x<?php  echo $InfoGT[54];   ?></span>
+-->														
+	
+															</small></h5>
 													<span class="description-text">GAME TIME</span>
 												</div>
 											</div>
