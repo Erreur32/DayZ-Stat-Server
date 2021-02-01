@@ -2,17 +2,18 @@
 
     ini_set("allow_url_fopen", 1);
 
-     // Edit this ->
+     // Edit this  ->
 
         $ipserv   = "103.58.149.102" ; // IP server game
         $portserv = "2302"  ; // Game Server Port
-		$modport  = "2312"  ; // Mod port omega (+10)
-		$queryport= "27016" ; // Queryport 
-		$title    = "DayZ Stat SERVER Clan | by TOX" ;   // Web title page
-		$descript = "Your Clan/server desciption";  // Your clan/server description 
+	$modport  = "2312"  ; // Mod port omega (+10)
+	$queryport= "27016" ; // Queryport 
+	$title    = "DayZ Stat SERVER Clan | by TOX" ; // Web title page
+	$descript = "Your Clan/server desciption";  // Your clan/server description 
         $namemap  = "MAP CHERNARUS"; // you can put what you want.
 
-     //   Don't touch below
+
+    //   Don't touch below (or you know what you do)
 
        $urlserv = $ipserv.":".$portserv ;
 	// need to fix if mod = 0 
@@ -23,7 +24,7 @@
 
 
 
-     // librarie SQ - info serv game
+    // librarie SQ - info serv game
         require  'SQ_/bootstrap.php';
         use xPaw\SourceQuery\SourceQuery;
 
