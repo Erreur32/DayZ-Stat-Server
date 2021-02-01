@@ -15,7 +15,6 @@
    * Schema database is not ready yet.*
 
  - put *statserverjson.sh* in crontab like this:
->     check  statserver_json.sh  file and put in crontab like this
 >      */5 * * * *       /bin/bash /your/path/statserver_json.sh
  
 
