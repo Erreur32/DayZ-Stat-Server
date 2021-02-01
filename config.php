@@ -5,11 +5,11 @@
      // Edit this ->
 
         $ipserv   = "103.58.149.102" ; // IP server game
-        $portserv = "2302" ; // Game Server Port
-		$modport  = "2312" ; // Mod port omega (+10)
+        $portserv = "2302"  ; // Game Server Port
+		$modport  = "2312"  ; // Mod port omega (+10)
 		$queryport= "27016" ; // Queryport 
 		$title    = "DayZ Stat SERVER Clan | by TOX" ;   // Web title page
-		$descript = "Your Clan desciption" ;
+		$descript = "Your Clan/server desciption";  // Your clan/server description 
         $namemap  = "MAP CHERNARUS"; // you can put what you want.
 
      //   Don't touch below
