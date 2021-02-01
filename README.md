@@ -1,26 +1,33 @@
-# Hi Survivor !!
+## Hi Survivor !!
 
 ![https://dayz.echosystem.fr](https://git.echosystem.fr/repo-avatars/191)
 
 
 
-*Little Stat for Dayz Standalone server.*
+#   Simple live Stat for Dayz Standalone server.
 
 
- - Rquire Omega (to check mod only) 
+### Required
 
- - Optional   mysql database (to store status server for graph) 
+ -  Set the *config.php* file (Fill your `ip` , `port` , `query` and `omega server port mod`)
 
- - Optional
+ -  mysql database (to store status server for graph) 
+   * Schema database is not ready yet.*
+
+ - put *statserverjson.sh* in crontab like this:
 >     check  statserver_json.sh  file and put in crontab like this
->      */5 * * * *       /bin/bash /your/path/statserver_json.sh &>/dev/null 
+>      */5 * * * *       /bin/bash /your/path/statserver_json.sh
+ 
 
- - Set  your `ip` , `port` , `query` and `omega server port mod` in `config.php`
+ - 
 
 
+### OPTIONAL:
+
+ - Omega manager (to check mod only) 
 
 
-sample: [example](https://dayz.echosystem.fr/server/Namalsk2)
+### sample: [example](https://dayz.echosystem.fr/server/Namalsk2)
 
 
 ... STILL in Devlopment ...
@@ -31,8 +38,6 @@ sample: [example](https://dayz.echosystem.fr/server/Namalsk2)
 -----
 
 
-
-![https://dayz.echosystem.fr](https://git.echosystem.fr/repo-avatars/191)
 
 Website: [dayz.echosystem.fr](https://dayz.echosystem.fr)
 
