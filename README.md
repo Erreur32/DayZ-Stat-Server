@@ -27,8 +27,8 @@ Inspired by Omega namager for the template.
  -  mysql database (to store status server for graph) 
  >     Schema database is not ready yet.
 
- - put *statserverjson.sh* in crontab like this:
- >     */5 * * * *       /bin/bash /your/path/statserver_json.sh
+ - put *statserverjson.sh* in crontab like this  for mysql insert & creation of json file:
+ >     */5 * * * *       /bin/sh /your/path/statserver_json.sh
 
 
 
@@ -39,8 +39,10 @@ Inspired by Omega namager for the template.
  
  
 
-### sample: [example live page](https://dayz.echosystem.fr/server/Namalsk2)
+### sample:
 
+ [example live page](https://dayz.echosystem.fr/server/Namalsk2)
+ 
 ![https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/Screenshot_2021-02-01.png](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/Screenshot_2021-02-01.png)
 
 
