@@ -12,11 +12,13 @@ Inspired by Omaga for the template.
 
 ### Required
 
- -  Set the *config.php* file
- >      Fill your `ip` , `port` , `query` and `omega server port mod`
+ -  Set the *config.php* file and fill your `ip` , `port` , `query` and `omega server port mod`.
 
-
-
+    >         $ipserv   = "6.6.6.6"; // IP server game
+    >         $portserv = "2302" ;   // Game Server Port
+    >         $modport  = "2312" ;   // Mod port omega (+10)
+    >         $queryport= "27016";   // Queryport
+ 
 
 ### OPTIONAL:
 
@@ -30,10 +32,11 @@ Inspired by Omaga for the template.
 
 
 
-Library used:
+### Library used:
 
   [PHP-Source-Query](https://github.com/xPaw/PHP-Source-Query) -     PHP library to query servers that implement Steam query protocol (also known as Source Engine Query protocol) 
 
+ 
  
 
 ### sample: [example live page](https://dayz.echosystem.fr/server/Namalsk2)
@@ -46,9 +49,6 @@ Library used:
 
 
 -----
-
-
-
 Website: [dayz.echosystem.fr](https://dayz.echosystem.fr)
 
 Author : Erreur32
