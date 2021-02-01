@@ -26,7 +26,7 @@
  - Omega manager (to check mod only) 
 
 
-### sample: [example](https://dayz.echosystem.fr/server/Namalsk2)
+### sample: [example live page](https://dayz.echosystem.fr/server/Namalsk2)
 
 
 # ... STILL in Devlopment ...
