@@ -9,13 +9,14 @@
 
 ### Required
 
- -  Set the *config.php* file (Fill your `ip` , `port` , `query` and `omega server port mod`)
+ -  Set the *config.php* file
+ >   Fill your `ip` , `port` , `query` and `omega server port mod`
 
  -  mysql database (to store status server for graph) 
-   * Schema database is not ready yet.*
+ >     * Schema database is not ready yet.*
 
  - put *statserverjson.sh* in crontab like this:
->      */5 * * * *       /bin/bash /your/path/statserver_json.sh
+ >      */5 * * * *       /bin/bash /your/path/statserver_json.sh
  
 
  - 
