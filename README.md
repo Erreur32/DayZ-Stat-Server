@@ -5,7 +5,7 @@
 
 
 #   Simple live Stat for Dayz Standalone server ☠.
-Inspired by Omaga for the template.
+Inspired by Omega namager for the template.
 
 
 ## 🔥 STILL in Devlopment ...
