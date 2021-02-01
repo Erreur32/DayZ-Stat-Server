@@ -1,10 +1,10 @@
-## Hi Survivor !!
+## Hi Survivor ☠ !!
 
 ![https://dayz.echosystem.fr](https://git.echosystem.fr/repo-avatars/191)
 
+# 🔥 STILL in Devlopment ...
 
-
-#   Simple live Stat for Dayz Standalone server.
+#   Simple live Stat for Dayz Standalone server ☠.
 
 
 ### Required
@@ -28,8 +28,9 @@
 
 ### sample: [example live page](https://dayz.echosystem.fr/server/Namalsk2)
 
+![https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/Screenshot_2021-02-01.png](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/Screenshot_2021-02-01.png)
 
-# ... STILL in Devlopment ...
+# 🔥 STILL in Devlopment ...
 
 
 
@@ -40,4 +41,4 @@
 
 Website: [dayz.echosystem.fr](https://dayz.echosystem.fr)
 
-Author: Erreur32
+Author : Erreur32
