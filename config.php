@@ -1,20 +1,21 @@
 <?php
-	        ini_set("allow_url_fopen", 1);
+
+    ini_set("allow_url_fopen", 1);
 
      // Edit this ->
 
-                $ipserv   = "103.58.149.102" ; // IP server game
-                $portserv = "2302" ; // Game Server Port
+        $ipserv   = "103.58.149.102" ; // IP server game
+        $portserv = "2302" ; // Game Server Port
 		$modport  = "2312" ; // Mod port omega (+10)
 		$queryport= "27016" ; // Queryport 
-		$title    = "MY stat SERVER " ;   // Web title page
-		$descript = "Your crew desciption" ;
-                $namemap  = "MAP CHERNARUS"; // you can put what you want.
+		$title    = "DayZ Stat SERVER Clan | by TOX" ;   // Web title page
+		$descript = "Your Clan desciption" ;
+        $namemap  = "MAP CHERNARUS"; // you can put what you want.
 
      //   Don't touch below
 
-                $urlserv = $ipserv.":".$portserv ;
-		// need to fix if mod = 0 
+       $urlserv = $ipserv.":".$portserv ;
+	// need to fix if mod = 0 
                 $json = file_get_contents("http://".$ipserv.":".$modport."/");
                 $objhigher=json_decode($json); //converts to an object
                 $objlower = $objhigher[0];     // if the json response its multidimensional this lowers it
