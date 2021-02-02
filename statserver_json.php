@@ -6,10 +6,11 @@
 
  echo "<hr><h1> TEST connection MYSQL </h1>";
 
- //echo $InfoGT ;
+//echo $InfoGT;
 
- echo "<hr>";
+echo $Players;
+echo "<hr>";
 
-//echo  $Info['GameTags'];
+echo  $Info['GameTags'];
 
 ?>

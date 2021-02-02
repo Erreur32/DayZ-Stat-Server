@@ -1,18 +1,11 @@
 <?php
-/*
+
         $servdb = "";
         $userdb = "";
         $pdb    = "";
         $dbname = "";
 	$table  = "StatServer_1"; 
 
-*/
-
-        $servdb = "183.90.168.189";
-        $userdb = "fpinth_status";
-        $pdb    = "Nick053896077";
-        $dbname = "fpinth_status";
-        $table  = "StatServer_1";
 
      $StatServer = $table;
 

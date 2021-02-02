@@ -220,10 +220,10 @@ $sec = "300";
 }
 */
 
- if (count($objlower) > 0)  {
+										 if (count($objlower) > 0)  {
                                                                                 echo $InfoGT[73].$InfoGT[74].$InfoGT[75].$InfoGT[76].$InfoGT[77].$InfoGT[78];
                                                                                 echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[47]. "</span> - <i class='fas  fa-moon'></i><span style='color: white;'>x".$InfoGT[60]."  </span>";
-}
+										}
 
 
 ?>
@@ -253,7 +253,18 @@ $sec = "300";
 											
 											<div class="col-md-2 col-xs-12">
 												<div class="description-block">
-											<h5 class="description-header"><?php  echo $InfoGT[24].$InfoGT[25].$InfoGT[26].$InfoGT[27].$InfoGT[28].$InfoGT[29].$InfoGT[30].$InfoGT[31];  ?> 
+											<h5 class="description-header">
+											  <?php  //echo count($objlower)
+
+                                                                                         if (count($objlower) == 0){     
+											 echo $InfoGT[18].$InfoGT[19].$InfoGT[20].$InfoGT[21].$InfoGT[22].$InfoGT[23].$InfoGT[24].$InfoGT[25];
+											 }
+
+											 if (count($objlower) > 0){
+											 echo $InfoGT[19].$InfoGT[25].$InfoGT[26].$InfoGT[27].$InfoGT[28].$InfoGT[29].$InfoGT[30].$InfoGT[31]; 
+											}
+											 ?>
+
 													</h5>
 													<span class="description-text">HIVE</span>
 												</div>

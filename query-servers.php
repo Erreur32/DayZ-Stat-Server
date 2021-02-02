@@ -1,13 +1,10 @@
 <?php	
 
-
 ini_set('display_errors', 'on');
 error_reporting(E_ALL); // Display all types of error
 
-
-
 require_once("config.inc.php");
-require_once("gameq/src/GameQ/Autoloader.php");
+require_once("GameQ/Autoloader.php");
 //require_once("GameQ/src/GameQ/Autoloader.php");
 function secondsToString($seconds) {
 	$hours = floor($seconds / 3600);

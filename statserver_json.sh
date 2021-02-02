@@ -18,10 +18,17 @@ varMod="server1"
 
 # Game Port IP  mod
 IpGame="103.58.149.102"
-PortGame="2402"
-QueryGame="27017"
+PortGame="2302"
+QueryGame="27016"
 
-#CHECKstatserver="/tmp/CHECKstatserver_${varMod}.json"
+
+TABLE="StatServer_1"
+DB_USER="fpinth_status"
+DB_PASSWD="Nick053896077"
+DB_NAME="fpinth_status"
+DB_SERV="183.90.168.189"
+
+CHECKstatserver="/tmp/CHECKstatserver_${varMod}.json"
 statserver="${pathd}/${varMod}/statserver.json"
 gameqjson="${pathd}/${varMod}/gameqjson.json"
 
@@ -30,15 +37,11 @@ gameqjson="${pathd}/${varMod}/gameqjson.json"
 # pathBin="/dayz/bin"
 pathDBe="${pathd}/${varMod}"
 
-#   NEED to SET
+# NEED to SET date
 # SQL
 datesql=$(date +'%F %T')
 date=$(date +'%F %T')
 
-TABLE=""
-DB_USER=""
-DB_PASSWD=""
-DB_NAME=""
 
 #DEBUG:
 # ls ${statserver}
@@ -55,7 +58,7 @@ fi
 
 if [ ! -r "$statserver" ]; then
     echo " ⛔Error:"${statserver}" doesn't exits"
-    exit 1
+#    exit 1
 fi
 
 
@@ -79,36 +82,13 @@ insert_mysql_down() {
 numplayers="0"
 players="0"
 ping="0"
-mysql --user=$DB_USER --password=$DB_PASSWD --database=$DB_NAME << EOF
+mysql --host=$DB_SERV --user=$DB_USER --password=$DB_PASSWD --database=$DB_NAME << EOF
  SET NAMES utf8;
  insert into $TABLE (\`date\`,\`name\`,\`game\`,\`map\`,\`version\`,\`requiredVersion\`,\`numplayers\`,\`players\`,\`maxplayers\`,\`ping\`,\`timeserver\`,\`hive\`,\`battleye\`,\`connect\`,\`secure\`) VALUES ("$datesql","OFFLINE","$game","$map","$version","$requiredVersion","$numplayers","$players","$maxplayers","$ping","$timeserver","$hive","$battleye","$connect","$secure");
 
 EOF
 }
 
-print_info() {
-echo -e "$name $map $password $game ($numplayers) $version $maxplayers $ping $connect $secure $requiredVersion $island [$players] $mod $hive $battleye $timeserver $speedtime $speedtimenight $timeLeft $secure" > $pathDBe/Info-all.txt
-echo -e "- Statserver Expansion: ${date}" >  $pathDBe/Info-date.txt
-echo "Name: $name" > $pathDBe/Info-name.txt
-echo "Game: $game" > $pathDBe/Info-game.txt
-echo "Numplayer: $numplayers" > $pathDBe/Info-numplayers.txt
-echo "Version: $version" > $pathDBe/Info-version.txt
-echo "Connect: $connect" > $pathDBe/Info-connect.txt
-echo "Timeserver: $timeserver" > $pathDBe/Info-timeserver.txt
-echo "Maxplayer: $maxplayers" > $pathDBe/Info-maxplayers.txt
-echo "Password: $password" > $pathDBe/Info-password.txt
-echo "RequireVersion: $requiredVersion" > $pathDBe/Info-requiredVersion.txt
-echo "Secure: $secure" > $pathDBe/Info-secure.txt
-echo "Island: $island" > $pathDBe/Info-island.txt
-echo "Ping: $ping" > $pathDBe/Info-ping.txt
-echo "Map: $map" > $pathDBe/Info-map.txt
-
-echo "Hive: $hive"  > $pathDBe/Info-hive.txt
-echo "Battleye: $battleye" > $pathDBe/Info-battleye.txt
-
-echo "Players: $players" > $pathDBe/Info-players.txt
-#echo "Players: $gq_players" >> $pathDBe/Info-players.txt
-}
 
 varcat=$(cat $statserver)
 
@@ -130,7 +110,7 @@ island=$(echo $varcat | jq -r '.raw.rules.island')
 mod=$(echo $varcat | jq -r '.raw.tags[63:66]')
 hive=$(echo $varcat | jq -r '.raw.tags[18:26]')
 battleye=$(echo $varcat | jq -r '.raw.tags[:8]')
-timeserver=$(echo $varcat | jq -r '.raw.tags[67:]')
+timeserver=$(echo $varcat | jq -r '.raw.tags[68:]')
 speedtime=$(echo $varcat | jq -r '.raw.tags[41:42]')
 speedtimenight=$(echo $varcat | jq -r '.raw.tags[54:55]')
 timeLeft=$(echo $varcat | jq -r '.raw.rules.timeLeft')
@@ -140,16 +120,11 @@ serverstatus="UP"
 ###############
 # check
 
-print_info  2>&1
-# print only error
-cat $pathDBe/Info-* > $pathDBe/Info_$varMod.txt
-# cat $pathDBe/Info_$varMod.txt
-
 echo " [✔] Server UP =>> update mysql"
 echo " Debug: $numplayers"
 
 insert_mysql() {
-mysql --user=$DB_USER --password=$DB_PASSWD --database=$DB_NAME << EOF
+mysql --host=$DB_SERV --user=$DB_USER --password=$DB_PASSWD --database=$DB_NAME << EOF
  SET NAMES utf8;
  insert into $TABLE (\`date\`,\`name\`,\`game\`,\`map\`,\`version\`,\`requiredVersion\`,\`numplayers\`,\`players\`,\`maxplayers\`,\`ping\`,\`timeserver\`,\`hive\`,\`battleye\`,\`connect\`,\`secure\`) VALUES ("$datesql","$name","$game","$map","$version","$requiredVersion","$numplayers","$players","$maxplayers","$ping","$timeserver","$hive","$battleye","$connect","$secure");
 
@@ -159,4 +134,8 @@ EOF
 insert_mysql && echo -e "\n ✅ Updated Mysql  " || echo -e "\n   Huston ,up  MYSQL  issue"
 
 fi
+
+echo -e "\nCheck Date SQL format:"
+echo $date
+
 exit 1
