@@ -6,8 +6,8 @@ $sec = "300";
 
 
 
-ini_set('display_errors', 'on');
-error_reporting(E_ALL); // Display all types of error
+//ini_set('display_errors', 'on');
+//error_reporting(E_ALL); // Display all types of error
 
 
  include_once('./consql.php');
