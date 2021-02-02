@@ -11,6 +11,8 @@
 	$title    = "DayZ Stat SERVER Clan | by TOX" ; // Web title page
 	$descript = "Your Clan/server desciption";  // Your clan/server description 
         $namemap  = "MAP CHERNARUS"; // you can put what you want.
+	$logoteam = "logoteam.png";
+	$imagemap = "chernarus.jpg";
 
 
     //   Don't touch below (or you know what you do)

@@ -164,8 +164,7 @@ $sec = "300";
 		echo "</main>";
                 setlocale(LC_ALL,'french');
                 echo "<center><small class='text-muted'>Last refresh</small> <br>  <strong class='h4'>".date('m/d/y H:i:s')."</strong></center>";
-                echo "<div style=\"padding-bottom: 10%;padding-left: 20%;padding-right: 20%\"> <center><img src=\"https://steamuserimages-a.akamaihd.net/ugc/1649972925761363590/C3DC3BB6880B659518D19ECDA9610C424794EBB8/\" class=\"arrondie2\"   width=\"100%\" max-height=\"20%\" height=\"auto\"></center></div></div>";
-//      include('footer.php');
+                echo "<div style=\"padding-bottom: 10%;padding-left: 20%;padding-right: 20%\"> <center><img src=".$logoteam." class=\"arrondie2\"   width=\"100%\" max-height=\"20%\" height=\"auto\"></center></div></div>";
                 exit;
 
                 }
@@ -293,7 +292,7 @@ $sec = "300";
 
 													 <div class="col-lg-2 col-sm-5">
                                                                                                                 <div class="callout callout-dark" style="padding:0">
-															 <img src="logoteam.png" class="arrondie2" height="50px"  width="150px">
+															 <img src="<?php echo $imagemap; ?>" class="arrondie2" height="50px"  width="150px">
 
                                                                                                                 </div>
                                                                                                         </div>
@@ -401,7 +400,7 @@ $sec = "300";
 																					</label>
 																				</div>
 																				<div class="col-sm-7">
-																					<i class="fa fa-user"></i>	
+																					<i class="fa fa-user"> (Databse is empty)</i>	
 																				</div>
 																			</div>
 																		</div>
@@ -430,7 +429,7 @@ $sec = "300";
 																					</label>
 																				</div>
 																			<div class="col-sm-7"><i class="fas	fa-dot-circle"	style="color:#20a8d8"></i>
-																				  SQL not active <font color=orange>// Function not ready</font>
+																				  SQL not active <font color=orange></font>
 																				</div>
 																			</div>
 																		</div>
@@ -631,7 +630,7 @@ $sec = "300";
                                                                                                         <div class="card">
                                                                                                                 <div class="card-header" style="padding: 15px;"> <i class="fas fa-map"></i>  MAP  </div>
                                	                                                      <!--a href=""-->
-											<img src="chernarus.jpg" style="width:100%;max-width:1200px;height:auto;padding:5px;" class="arrondie2">
+											<img src="imagemap.jpg" style="width:100%;max-width:1200px;height:auto;padding:5px;" class="arrondie2">
 											<!--/a-->
                                                                                                         </div>
                                                                                                 </div>
