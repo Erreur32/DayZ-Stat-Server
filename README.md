@@ -43,7 +43,7 @@ Inspired by Omega namager for the template.
 
  [example live page](https://dayz.echosystem.fr/server/Namalsk2)
  
-![https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/Screenshot_2021-02-01.png](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/Screenshot_2021-02-01.png)
+![https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/assets/Screenshot_2021-02-01.png](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/assets/Screenshot_2021-02-01.png)
 
 
 

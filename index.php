@@ -19,7 +19,7 @@ $sec = "300";
 	<meta name="author" content="Erreur32">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<meta name="keyword" content="tox,server,dayz,map,namalsk,namalsk island">
-	<link id="theme-style" href="./style_dark.css" rel="stylesheet">
+	<link id="theme-style" href="css/style_dark.css" rel="stylesheet">
 
 	<style>
 		.tab-content {
@@ -687,8 +687,8 @@ $sec = "300";
 
 
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-        <script src="./bootstrap.min.js"></script>
-        <script src="./graph_loader.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/graph_loader.js"></script>
         <script src="js/switch.js"></script>
 	<!-- menu deroulant -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -778,7 +778,7 @@ $sec = "300";
  
 
 <!-- not implanted -->
-<link rel="stylesheet" type="text/css" href="dark.css" />
+<link rel="stylesheet" type="text/css" href="css/dark.css" />
 <!-- Dark Theme -->
 <script>
  $("#darkTrigger").click(function(){
