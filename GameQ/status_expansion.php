@@ -1,11 +1,12 @@
 <?php
-//ini_set('display_errors', 1);
-//error_reporting(E_ALL); // Display all types of error
-
-// Read JSON file
-$readjson = file_get_contents('./statserver_expansion.json');
+ini_set('display_errors', 1);
+error_reporting(E_ALL); // Display all types of error
 
 set_time_limit ( 4 );      // Max execution time is set to 4 seconds
+
+
+// Read JSON file
+//$readjson = file_get_contents('./statserver_expansion.json');
 
 // Load auto loader
 require_once(__DIR__ . '/src/GameQ/Autoloader.php');
@@ -16,9 +17,9 @@ $protocols_path = __DIR__ . "/src/GameQ/Protocols/";
 $GameQ = new \GameQ\GameQ();
 $GameQ->addServer([
     'type'    => 'dayz',
-    'host'    => '82.64.214.194:3201',
+    'host'    => '82.64.214.194:3222',
     'options' => [
-        'query_port' => 27021,
+        'query_port' => 27022,
     ],
 ]);
 
@@ -47,7 +48,8 @@ $results = $GameQ->process();
 echo "<hr>";
 
 
-$data = json_decode($readjson);
+//$data = json_decode($readjson);
+$data = json_decode($GameQ);
 // class
 $name = $data->{'name'};
 $map = $data->{'map'};
@@ -75,7 +77,7 @@ $players = $data->{'players'};
 //$playersuser = substr($players,0,8);
 //$players = $data->{'array_filter($players)'};
 //$player = $data->{'players'};
-7
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
