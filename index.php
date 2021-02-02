@@ -4,6 +4,12 @@
 $page = $_SERVER['PHP_SELF'];
 $sec = "300";
 
+
+
+ini_set('display_errors', 'on');
+error_reporting(E_ALL); // Display all types of error
+
+
  include_once('./consql.php');
  include_once('./config.php');
 
@@ -202,18 +208,18 @@ $sec = "300";
 											<div class="col-md-2 col-xs-12 border-right">
 												<div class="">
 													<h5 class="description-header">
-														
-														<?php  
-														      // if no mod
-															 echo $InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72];  ?> <small style="color: grey;">
-                                                                                                                        <i class="fas  fa-sun"></i><span style="color: white;">x<?php  echo $InfoGT[42];   ?></span>
-                                                                                                                        - <i class="fas  fa-moon"></i><span     style="color: white;">x<?php  echo $InfoGT[55];   ?></span>
+										<?php  //echo count($objlower)
+										     if (count($objlower) == 0){      // if no mod
+											 echo $InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72];  
+								                  	 echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[42]. "</span> - <i class='fas  fa-moon'></i><span     style='color: white;'>x".$InfoGT[55]."  </span>";											} 
 
-<!--														      // if mod active 
-															echo $InfoGT[67].$InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71];  ?> 
-															<small style="color: grey;"><i class="fas  fa-sun"></i><span style="color: white;">x<?php  echo $InfoGT[41];   ?></span>
-															- <i class="fas  fa-moon"></i><span	style="color: white;">x<?php  echo $InfoGT[54];   ?></span>
--->														
+												else {
+										 echo $InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72].$InfoGT[73];
+                                                                                 echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[43]. "</span> - <i class='fas  fa-moon'></i><span     style='color: white;'>x".$InfoGT[56]."  </span>";  
+}
+?>
+
+
 	
 															</small></h5>
 													<span class="description-text">GAME TIME</span>
@@ -460,7 +466,7 @@ $sec = "300";
 																					</label>
 																				</div>
 																				<div class="col-sm-7">
-																					<a style="text-decoration:none;" href='steam://connect/82.64.214.194:3201/'>
+																					<a style="text-decoration:none;" href='steam://connect/<?php echo $urlserv; ?>/'>
 																							<span class='label label-success'> GO PLAY </span>
 																					 	</a>										
 																				</div>
