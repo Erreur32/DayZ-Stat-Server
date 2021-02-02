@@ -12,14 +12,14 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/dayz/dat
 #
 
 # need to create the directory if dosen't exist an error will appear.
-pathd="/path/to/your/website"
+pathd="/home/dayz/git-DayZ-server-stat"
 # create directory
 varMod="server1"
 
 # Game Port IP  mod
-IpGame=""
-PortGame=""
-QueryGame=""
+IpGame="103.58.149.102"
+PortGame="2402"
+QueryGame="27017"
 
 #CHECKstatserver="/tmp/CHECKstatserver_${varMod}.json"
 statserver="${pathd}/${varMod}/statserver.json"
@@ -46,12 +46,12 @@ DB_NAME=""
 
 if [ -d ${pathd}/${varMod} ]
 then
-    echo " ✅ Directory ${pathd}/${varMod}  exist!"
+    echo " ✅ Directory ${pathd}/${varMod}  ok"
 else
     mkdir -p ${pathd}/${varMod}
     echo " ✅ Directory ${pathd}/${varMod} CREATED  ✅"
 fi
-exit 1
+
 
 if [ ! -r "$statserver" ]; then
     echo " ⛔Error:"${statserver}" doesn't exits"
@@ -59,7 +59,19 @@ if [ ! -r "$statserver" ]; then
 fi
 
 
+
+nmapGame=`/usr/local/bin/gamedig --type dayz $IpGame:$QueryGame  > ${CHECKstatserver}`
+catCHECKstatserver=`cat ${CHECKstatserver}`
+if [[ "$catCHECKstatserver" ==  *error* ]]
+then
+       echo -e " ✅ Game is Down  | port  $PortGame closed! ⛔  "
+       insert_mysql_down && echo -e " ✅ Mysql Updated " || echo -e "\n !!!!!!!!!!!!!  Huston ,  MYSQL issue ⛔"
+#     echo -e "\n Mysql updated"
 exit 1
+else
+echo -e " ✅ Game is UP | port  $PortGame OPEN ✅ !\n"
+cp ${CHECKstatserver} ${statserver}
+
 
 ##########################  not use 
 

@@ -213,10 +213,19 @@ $sec = "300";
 										 echo $InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72];  
 							                  	 echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[42]. "</span> - <i class='fas  fa-moon'></i><span     style='color: white;'>x".$InfoGT[55]."  </span>";											} 
 
-												if (count($objlower) > 0)  {
+
+/*												if (count($objlower) > 0)  {
 										 echo $InfoGT[67].$InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72].$InfoGT[73];
                                                                                  echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[43]. "</span> - <i class='fas  fa-moon'></i><span     style='color: white;'>x".$InfoGT[56]."  </span>";  
 }
+*/
+
+ if (count($objlower) > 0)  {
+                                                                                echo $InfoGT[73].$InfoGT[74].$InfoGT[75].$InfoGT[76].$InfoGT[77].$InfoGT[78];
+                                                                                echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[47]. "</span> - <i class='fas  fa-moon'></i><span style='color: white;'>x".$InfoGT[60]."  </span>";
+}
+
+
 ?>
 
 
@@ -244,7 +253,7 @@ $sec = "300";
 											
 											<div class="col-md-2 col-xs-12">
 												<div class="description-block">
-											<h5 class="description-header"><?php  echo $InfoGT[18].$InfoGT[19].$InfoGT[20].$InfoGT[21].$InfoGT[22].$InfoGT[23].$InfoGT[24].$InfoGT[25];  ?> 
+											<h5 class="description-header"><?php  echo $InfoGT[24].$InfoGT[25].$InfoGT[26].$InfoGT[27].$InfoGT[28].$InfoGT[29].$InfoGT[30].$InfoGT[31];  ?> 
 													</h5>
 													<span class="description-text">HIVE</span>
 												</div>
@@ -466,7 +475,7 @@ $sec = "300";
 																					</label>
 																				</div>
 																				<div class="col-sm-7">
-																				<a style="text-decoration:none;" href='steam://connect/<?php echo $ipserv.":".$queryport; ?>/'>
+															<a style="text-decoration:none;" href='steam://221100/<?php echo $ipserv.":".$queryport."/";?>'>
 																							<span class='label label-success'> GO PLAY </span>
 																					 	</a>										
 																				</div>
