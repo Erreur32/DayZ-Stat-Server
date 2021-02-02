@@ -213,7 +213,7 @@ $sec = "300";
 										 echo $InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72];  
 							                  	 echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[42]. "</span> - <i class='fas  fa-moon'></i><span     style='color: white;'>x".$InfoGT[55]."  </span>";											} 
 
-												else {
+												if (count($objlower) > 0)  {
 										 echo $InfoGT[67].$InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72].$InfoGT[73];
                                                                                  echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[43]. "</span> - <i class='fas  fa-moon'></i><span     style='color: white;'>x".$InfoGT[56]."  </span>";  
 }
@@ -466,7 +466,7 @@ $sec = "300";
 																					</label>
 																				</div>
 																				<div class="col-sm-7">
-																					<a style="text-decoration:none;" href='steam://connect/<?php echo $urlserv; ?>/'>
+																				<a style="text-decoration:none;" href='steam://connect/<?php echo $ipserv.":".$queryport; ?>/'>
 																							<span class='label label-success'> GO PLAY </span>
 																					 	</a>										
 																				</div>
