@@ -1,4 +1,4 @@
-TEST
-test
-GameQ
-gameq
+test/
+GameQ/
+gameq/
+.gitignore
