@@ -4,19 +4,16 @@
 // https://github.com/Austinb/GameQ/wiki/Examples-v3#different-client-and-query-ports
 $servers = [
 	[
-		'id' => 'DAYZ',
+		'id' => 'server1',
 		'type' => 'dayz',
-		'host' => '103.58.149.102:2302',
+		'host' => '82.64.214.194:3201',
 		'options' => [
-			'query_port' => 27016
+			'query_port' => 27022
 		]
 	]
-	//[
-		//'id' => 'Arma 2 OA Test',
-		//'type' => 'armedassault2oa',
-		//'host' => '107.191.44.98:2302'
-	//],
-//	[
+
+
+//	,[
 // 		'id' => 'DayZ Test',
 // 		'type' => 'dayz',
 // 		'host' => '51.91.61.15:7217',

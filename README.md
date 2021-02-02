@@ -29,7 +29,8 @@ Inspired by Omega namager for the template.
 
  - put *statserverjson.sh* in crontab like this  for mysql insert & creation of json file:
  >     */5 * * * *       /bin/sh /your/path/statserver_json.sh
-
+ OR
+ >     */5 * * * *       /usr/local/bin/php -f /your/path/dayz2json.php
 
 
 ### Library used:

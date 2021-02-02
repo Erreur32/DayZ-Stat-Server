@@ -1,9 +1,9 @@
 <?php
 
-        $servdb = "";
-        $userdb = "";
-        $pdb    = "";
-        $dbname = "";
+        $servdb = "localhost";
+        $userdb = "user";
+        $pdb    = "pass";
+        $dbname = "database";
 	$table  = "StatServer_1"; 
 
 
@@ -12,17 +12,14 @@
      $con = new mysqli($servdb, $userdb, $pdb, $dbname);
 
     if ($con->connect_error) {
-     //  echo (" SQL not active <font color=orange> // Function not ready yet </font> ");
-	echo ("<font color=red> ...Connection failed with MYSQL </font><br>");        
-	echo $servdb; echo "<br>";
-        echo $userdb; echo "<br>";
-	echo $table; echo "<br>";
-	
-     //	die("Connection failed: " . $con->connect_error);
+	// Display the alert box  
+//		echo '<script>alert("...Connection failed with MYSQL")</script>'; 
+		echo "<center><font color=red> ...Connection failed with MYSQL </font></center>";        
+        //	die("Connection failed: " . $con->connect_error);
     }
     else
     {
-      // echo ("Connect Successfully");
+      // echo "Connect Successfully";
     }
 
 

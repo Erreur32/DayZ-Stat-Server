@@ -5,9 +5,6 @@ error_reporting(E_ALL); // Display all types of error
 set_time_limit ( 4 );      // Max execution time is set to 4 seconds
 
 
-// Read JSON file
-//$readjson = file_get_contents('./statserver_expansion.json');
-
 // Load auto loader
 require_once(__DIR__ . '/src/GameQ/Autoloader.php');
 // Define the protocols path

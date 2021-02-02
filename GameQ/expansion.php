@@ -4,7 +4,7 @@
 set_time_limit ( 4 );      // Max execution time is set to 4 seconds
 
 // Read JSON file
-$readjson = file_get_contents('../statserver_expansion.json');
+$readjson = file_get_contents('../statserver.json');
 
 // Load auto loader
 require_once(__DIR__ . '/src/GameQ/Autoloader.php');

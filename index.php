@@ -4,16 +4,57 @@
 $page = $_SERVER['PHP_SELF'];
 $sec = "300";
 
-
-
 //ini_set('display_errors', 'on');
 //error_reporting(E_ALL); // Display all types of error
-
 
  include_once('./consql.php');
  include_once('./config.php');
 
+   //   Don't touch below (or you know what you do)
+
+       $urlserv = $ipserv.":".$portserv ;
+       // need to fix if mod = 0
+                $json = file_get_contents("http://".$ipserv.":".$modport."/");
+                $objhigher=json_decode($json); //converts to an object
+                $objlower = $objhigher[0];     // if the json response its multidimensional this lowers it
+                $objlower=json_decode($json);  //converts to an array of objects
+
+
+
+    // librarie SQ - info serv game
+        require  'SQ_/bootstrap.php';
+        use xPaw\SourceQuery\SourceQuery;
+
+        define( 'SQ_SERVER_ADDR', "${ipserv}" );     // IP server
+        define( 'SQ_SERVER_PORT', "${queryport}" );  // YOUR QUERY PORT
+        define( 'SQ_TIMEOUT',     3 );
+        define( 'SQ_ENGINE',      SourceQuery::SOURCE );
+
+        $Timer = MicroTime( true );
+        $Query = new SourceQuery( );
+
+        $Info    = Array( );
+        $Players = Array( );
+
+        try
+        {
+                $Query->Connect( SQ_SERVER_ADDR, SQ_SERVER_PORT, SQ_TIMEOUT, SQ_ENGINE );
+
+                $Info    = $Query->GetInfo( );
+                $Players = $Query->GetPlayers( );
+        }
+        catch( Exception $e )
+        {
+                $Exception = $e;
+        }
+
+        $Query->Disconnect( );
+
+        $Timer = Number_Format( MicroTime( true ) - $Timer, 4, '.', '' );
+        $InfoGT = $Info['GameTags'];
+
 ?>
+
 
 <head>
 	<meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
@@ -209,23 +250,23 @@ $sec = "300";
 												<div class="">
 													<h5 class="description-header">
 										<?php  //echo count($objlower)
-										     if (count($objlower) == 0){      // if no mod
-										 echo $InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72];  
-							                  	 echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[42]. "</span> - <i class='fas  fa-moon'></i><span     style='color: white;'>x".$InfoGT[55]."  </span>";											} 
+									// NEED to find a good regex for this shit!
+								     if (count($objlower) == 0){      // if no mod
+									 echo $InfoGT[67].$InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72].$InfoGT[73];  
+						                  	 echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[42]. "</span> - <i class='fas  fa-moon'></i><span     style='color: white;'>x".$InfoGT[55]."  </span>";											} 
 
-
-/*												if (count($objlower) > 0)  {
-										 echo $InfoGT[67].$InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72].$InfoGT[73];
-                                                                                 echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[43]. "</span> - <i class='fas  fa-moon'></i><span     style='color: white;'>x".$InfoGT[56]."  </span>";  
-}
-*/
+									 if (count($objlower) > 0)  {
+									  echo $InfoGT[67].$InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72].$InfoGT[73].$InfoGT[74];
+                                                                        echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[41].$InfoGT[42].$InfoGT[43]. "</span> - <i class='fas  fa-moon'></i><span     style='color: white;'>x".$InfoGT[54].$InfoGT[55].$InfoGT[56]."</span>";  
+											}
+/*
 
 										 if (count($objlower) > 0)  {
                                                                                 echo $InfoGT[73].$InfoGT[74].$InfoGT[75].$InfoGT[76].$InfoGT[77].$InfoGT[78];
                                                                                 echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[47]. "</span> - <i class='fas  fa-moon'></i><span style='color: white;'>x".$InfoGT[60]."  </span>";
 										}
 
-
+*/
 ?>
 
 
@@ -261,7 +302,7 @@ $sec = "300";
 											 }
 
 											 if (count($objlower) > 0){
-											 echo $InfoGT[19].$InfoGT[25].$InfoGT[26].$InfoGT[27].$InfoGT[28].$InfoGT[29].$InfoGT[30].$InfoGT[31]; 
+											 echo $InfoGT[18].$InfoGT[19].$InfoGT[20].$InfoGT[21].$InfoGT[22].$InfoGT[23].$InfoGT[24].$InfoGT[25];
 											}
 											 ?>
 
@@ -655,8 +696,11 @@ $sec = "300";
                                                                                                 <div class="col-lg-12 col-sm-12">
                                                                                                         <div class="card">
                                                                                                                 <div class="card-header" style="padding: 15px;"> <i class="fas fa-map"></i>  MAP  </div>
-                               	                                                      <!--a href=""-->
-											<img src="imagemap.jpg" style="width:100%;max-width:1200px;height:auto;padding:5px;" class="arrondie2">
+                               	                                                      <!--a href=""--> <div  style="width:100%;height:620px;">
+												<iframe src="https://dayz.ginfo.gg/<?php echo $namemap; ?>/#c=37;-4;3" frameborder="0" allowfullscreen    style="position:absolute;top:0;left:0;width:100%;height:590px;" security="restricted"></iframe>
+
+											<!--img src="imagemap.jpg" style="width:100%;max-width:1200px;height:auto;padding:5px;" class="arrondie2" -->
+												</div>
 											<!--/a-->
                                                                                                         </div>
                                                                                                 </div>
@@ -698,7 +742,7 @@ $sec = "300";
 	<footer class="app-footer">
 	<div style="text-align:center;"> <span style="text-align:center;"> © 2020 (-ToX-) - <a href="https://git.echosystem.fr/Erreur32/DayZ-Stat-Server">Dayz-server-stats</a> by  <a href="">Erreur32</a> </span>
 	 </div>
-	<div class="ml-auto"> 
+	<div class="ml-auto"> <a href="server.json">JSON</a>
 		<?php
 			$time = microtime();
 			$time = explode(' ', $time);
@@ -815,16 +859,3 @@ $sec = "300";
     }
  });
  </script>
-
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ70E6176C"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KZ70E6176C');
-</script>
-
