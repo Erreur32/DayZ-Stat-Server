@@ -10,7 +10,7 @@ $sec = "300";
 //error_reporting(E_ALL); // Display all types of error
 
 
- include_once('./consql.php');
+// include_once('./consql.php');
  include_once('./config.php');
 
 ?>
@@ -475,7 +475,7 @@ $sec = "300";
 																					</label>
 																				</div>
 																				<div class="col-sm-7">
-															<a style="text-decoration:none;" href='steam://221100/<?php echo $ipserv.":".$queryport."/";?>'>
+															<a style="text-decoration:none;" href='steam://connect/<?php echo $ipserv.":".$queryport."/";?>'>
 																							<span class='label label-success'> GO PLAY </span>
 																					 	</a>										
 																				</div>
