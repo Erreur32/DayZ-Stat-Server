@@ -7,14 +7,15 @@
 
         $ipserv   = "103.58.149.102" ; // IP server game
 
+/*
         $portserv = "2402"  ; // Game Server Port
 	$modport  = "2412"  ; // Mod port omega (+10)
 	$queryport= "27017" ; // Queryport 
-/*
+*/
         $portserv = "2302"  ; // Game Server Port
         $modport  = "2312"  ; // Mod port omega (+10)
         $queryport= "27016" ; // Queryport
-
+/*
 
         $ipserv   = "82.64.214.194" ; // IP server game
         $portserv = "3222"  ; // Game Server Port

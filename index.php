@@ -10,7 +10,7 @@ $sec = "300";
 //error_reporting(E_ALL); // Display all types of error
 
 
-// include_once('./consql.php');
+ include_once('./consql.php');
  include_once('./config.php');
 
 ?>
