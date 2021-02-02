@@ -630,8 +630,9 @@ $sec = "300";
                                                                                                 <div class="col-lg-12 col-sm-12">
                                                                                                         <div class="card">
                                                                                                                 <div class="card-header" style="padding: 15px;"> <i class="fas fa-map"></i>  MAP  </div>
-                               	                                                      <a href="map_.png">
-											<img src="map_.png" style="width:100%;max-width:1200px;height:auto;padding:5px;" class="arrondie2"></a>
+                               	                                                      <!--a href=""-->
+											<img src="chernarus.jpg" style="width:100%;max-width:1200px;height:auto;padding:5px;" class="arrondie2">
+											<!--/a-->
                                                                                                         </div>
                                                                                                 </div>
                                                                                         </div>
