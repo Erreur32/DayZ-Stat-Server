@@ -1,3 +1,12 @@
+<?php
+$page = $_SERVER['PHP_SELF'];
+$sec = "300";
+
+ include_once('./consql.php');
+ include_once('./config.php');
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
@@ -6,6 +15,7 @@ $sec = "300";
 
  include_once('./consql.php');
  include_once('./config.php');
+
 
 ?>
 
@@ -165,7 +175,7 @@ $sec = "300";
                 setlocale(LC_ALL,'french');
                 echo "<center><small class='text-muted'>Last refresh</small> <br>  <strong class='h4'>".date('m/d/y H:i:s')."</strong></center>";
                 echo "<div style=\"padding-bottom: 10%;padding-left: 20%;padding-right: 20%\"> <center><img src=\"https://steamuserimages-a.akamaihd.net/ugc/1649972925761363590/C3DC3BB6880B659518D19ECDA9610C424794EBB8/\" class=\"arrondie2\"   width=\"100%\" max-height=\"20%\" height=\"auto\"></center></div></div>";
-//      include('footer.php');
+//               include('footer.php');
                 exit;
 
                 }
@@ -203,20 +213,10 @@ $sec = "300";
 											<div class="col-md-2 col-xs-12 border-right">
 												<div class="">
 													<h5 class="description-header">
-														
-														<?php  
-														      // if no mod
-															 echo $InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72];  ?> <small style="color: grey;">
-                                                                                                                        <i class="fas  fa-sun"></i><span style="color: white;">x<?php  echo $InfoGT[42];   ?></span>
-                                                                                                                        - <i class="fas  fa-moon"></i><span     style="color: white;">x<?php  echo $InfoGT[55];   ?></span>
-
-<!--														      // if mod active 
-															echo $InfoGT[67].$InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71];  ?> 
-															<small style="color: grey;"><i class="fas  fa-sun"></i><span style="color: white;">x<?php  echo $InfoGT[41];   ?></span>
-															- <i class="fas  fa-moon"></i><span	style="color: white;">x<?php  echo $InfoGT[54];   ?></span>
--->														
-	
-															</small></h5>
+														<?php  echo $InfoGT[67].$InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71];  ?> <small style="color: grey;"> <i
+																class="fas  fa-sun"></i><span style="color: white;">x<?php  echo $InfoGT[41];   ?></span>
+																- <i class="fas  fa-moon"></i><span	style="color: white;">x<?php  echo $InfoGT[54];   ?></span>
+																</small></h5>
 													<span class="description-text">GAME TIME</span>
 												</div>
 											</div>
@@ -386,8 +386,8 @@ $sec = "300";
 																					</label>
 																				</div>
 																				<div class="col-sm-7">
-																		         	<a  href="#"><?php echo  $ipserv;   ?></a><br>
-																			 	<a  href="#"><?php echo  $portserv; ?></a>
+																		 <a	href="#"><?php echo  $ipserv; ?></a><br>
+																			 <a     href="#"><?php echo  $portserv; ?></a>
 																				</div>
 																			</div>
 																		</div>	
@@ -430,7 +430,7 @@ $sec = "300";
 																					</label>
 																				</div>
 																			<div class="col-sm-7"><i class="fas	fa-dot-circle"	style="color:#20a8d8"></i>
-																				  SQL not active <font color=orange>// Function not ready</font>
+																				 // not ready yet
 																				</div>
 																			</div>
 																		</div>
@@ -446,8 +446,8 @@ $sec = "300";
 																					</label>
 																				</div>
 																				<div class="col-sm-7">
-																			<!--a href="mod_server.php"--><span class="badge badge-light">	
-																				<b><?php echo count($objlower); ?></b>	<span class="text-muted"> Mods	</span></span><!--/a-->
+																				<a href="https://dayz.echosystem.fr/server/mod_namalsk2.php"><span class="badge badge-light">	
+																				<b><?php echo count($objlower); ?></b>	<span class="text-muted"> Mods	</span></span></a>
 																				</div>
 																			</div>
 																		</div>
@@ -519,8 +519,8 @@ $sec = "300";
 														<div class="card">
 															<div class="card-header">Player last 24	hours</div>
 																<div class="card-body">
-																<!--   // not ready yet -->
-																 <?php    include('./GraphPlayer.php'); ?>
+																need sql  // not ready yet
+																 <?php  //   include('./GraphPlayer.php'); ?>
 															</div>
 	                                                                                                        </div>
 													</div>
@@ -630,8 +630,8 @@ $sec = "300";
                                                                                                 <div class="col-lg-12 col-sm-12">
                                                                                                         <div class="card">
                                                                                                                 <div class="card-header" style="padding: 15px;"> <i class="fas fa-map"></i>  MAP  </div>
-                               	                                                      <a href="map_.png">
-											<img src="map_.png" style="width:100%;max-width:1200px;height:auto;padding:5px;" class="arrondie2"></a>
+                               	                                                      <a href="https://dayz.echosystem.fr/server/Namalsk/namalsk_map2.png">
+											<img src="https://dayz.echosystem.fr/server/Namalsk/namalsk_map_hd.png" style="width:100%;max-width:1200px;height:auto;padding:5px;" class="arrondie2"></a>
                                                                                                         </div>
                                                                                                 </div>
                                                                                         </div>
@@ -684,15 +684,16 @@ $sec = "300";
 	 </div>
 	</footer>
 
-
-        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <script src="./bootstrap.min.js"></script>
         <script src="./graph_loader.js"></script>
         <script src="js/switch.js"></script>
 	<!-- menu deroulant -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/9ba5e91dd6.js" crossorigin="anonymous"></script>
-
+<!--
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+-->
 	<style>
 		.tab-content {
 			margin-top: -1px;
@@ -775,8 +776,6 @@ $sec = "300";
 
 </style>
  
-
-<!-- not implanted -->
 <link rel="stylesheet" type="text/css" href="dark.css" />
 <!-- Dark Theme -->
 <script>
