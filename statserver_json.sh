@@ -23,10 +23,10 @@ QueryGame="27016"
 
 
 TABLE="StatServer_1"
-DB_USER="fpinth_status"
-DB_PASSWD="Nick053896077"
-DB_NAME="fpinth_status"
-DB_SERV="183.90.168.189"
+DB_USER=""
+DB_PASSWD=""
+DB_NAME=""
+DB_SERV=""
 
 CHECKstatserver="/tmp/CHECKstatserver_${varMod}.json"
 statserver="${pathd}/${varMod}/statserver.json"
