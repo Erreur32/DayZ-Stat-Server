@@ -210,11 +210,11 @@ $sec = "300";
 													<h5 class="description-header">
 										<?php  //echo count($objlower)
 										     if (count($objlower) == 0){      // if no mod
-											 echo $InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72];  
-								                  	 echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[42]. "</span> - <i class='fas  fa-moon'></i><span     style='color: white;'>x".$InfoGT[55]."  </span>";											} 
+										 echo $InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72];  
+							                  	 echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[42]. "</span> - <i class='fas  fa-moon'></i><span     style='color: white;'>x".$InfoGT[55]."  </span>";											} 
 
 												else {
-										 echo $InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72].$InfoGT[73];
+										 echo $InfoGT[67].$InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72].$InfoGT[73];
                                                                                  echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[43]. "</span> - <i class='fas  fa-moon'></i><span     style='color: white;'>x".$InfoGT[56]."  </span>";  
 }
 ?>
