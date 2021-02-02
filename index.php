@@ -293,7 +293,7 @@ $sec = "300";
 
 													 <div class="col-lg-2 col-sm-5">
                                                                                                                 <div class="callout callout-dark" style="padding:0">
-															 <img src="image_ico.png" class="arrondie2" height="50px"  width="150px">
+															 <img src="logo.png" class="arrondie2" height="50px"  width="150px">
 
                                                                                                                 </div>
                                                                                                         </div>
