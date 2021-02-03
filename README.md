@@ -5,12 +5,14 @@
 
 
 #   Simple live Stat for Dayz Standalone server ☠.
-Inspired by Omega namager for the template.
+Inspired by Omega namager template.
+
+*The [OmegaManager](https://cftools.de/) is a local application to run your DayZ servers. It automatically deploys, runs, watches, restarts and updates your server.*
 
 
-## 🔥 STILL in Devlopment ...
+## 🔥 STILL in Devlopment ... not ready yet
 
-### Required
+### Configuration Required
 
  -  Set the *config.php* file and fill your `ip` , `port` , `query` and `omega server port mod`.
 
@@ -31,6 +33,19 @@ Inspired by Omega namager for the template.
  >     */5 * * * *       /bin/sh /your/path/statserver_json.sh
  OR
  >     */5 * * * *       /usr/local/bin/php -f /your/path/dayz2json.php > /your/path/server.json
+
+
+
+### TODO
+
+ - make Regex to check time serv ( auto detect )
+ 
+ - Need to finish SQL part for stat USER
+ 
+ - Admin section with usefull info from your log server.
+
+ 
+
 
 
 ### Library used:
