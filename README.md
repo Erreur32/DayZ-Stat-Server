@@ -1,7 +1,8 @@
-## Hi Survivor ☠ !!
+## Hi Survivor !!
 
 ![https://dayz.echosystem.fr](https://git.echosystem.fr/repo-avatars/191)
 
+☠  TEAM DayZ -  https://dayz.echosystem.fr ☠ 
 
 
 #   Simple live Stat for Dayz Standalone server ☠.
