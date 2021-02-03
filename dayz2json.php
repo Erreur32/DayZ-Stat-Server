@@ -27,13 +27,8 @@ $GameQ->setOption('timeout', 5); // seconds
 $GameQ->addFilter('normalize');
 $results = $GameQ->process();
 
-$expansion_gq = json_encode($results, JSON_INVALID_UTF8_IGNORE | JSON_INVALID_UTF8_SUBSTITUTE | JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE  | JSON_THROW_ON_ERROR);
-echo $expansion_gq;
-
-//$myJSON = json_decode(utf8_encode($results), true);
-//echo $expansion_gq['gq_numplayers'];
-//echo "<br>";
-//print_r($results);
+$server_gq = json_encode($results, JSON_INVALID_UTF8_IGNORE | JSON_INVALID_UTF8_SUBSTITUTE | JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE  | JSON_THROW_ON_ERROR);
+echo $server_gq;
 
 
 ?>

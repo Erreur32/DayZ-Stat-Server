@@ -19,8 +19,6 @@ $sec = "300";
                 $objlower = $objhigher[0];     // if the json response its multidimensional this lowers it
                 $objlower=json_decode($json);  //converts to an array of objects
 
-
-
     // librarie SQ - info serv game
         require  'SQ_/bootstrap.php';
         use xPaw\SourceQuery\SourceQuery;
@@ -52,7 +50,6 @@ $sec = "300";
 
         $Timer = Number_Format( MicroTime( true ) - $Timer, 4, '.', '' );
         $InfoGT = $Info['GameTags'];
-
 ?>
 
 
@@ -225,7 +222,7 @@ $sec = "300";
 													<h5 class="description-header">
 													<?php if (empty($Info['Players'])) {
 														  echo "<span style='color:grey;'>"; } ?>
-                                                                                                         <?php  echo $Info['Players'] ?> <span style='color:grey;'>/<?php echo  $Info['MaxPlayers'] ; ?></span></span>
+                                                                                                         <?php  echo $Info['Players']; ?> <span style='color:grey;'>/<?php echo  $Info['MaxPlayers'] ; ?></span></span>
 													</h5>
 													 <span class="description-text">PLAYERS</span>
 												</div>
