@@ -1,4 +1,7 @@
-## Hi Survivor !!
+## Hi Dayz Survivor !!
+
+
+## 🔥 STILL in Devlopment ... not ready yet
 
 ![https://dayz.echosystem.fr](https://git.echosystem.fr/repo-avatars/191)
 
@@ -11,7 +14,6 @@ Inspired by Omega namager template.
 *The [OmegaManager](https://cftools.de/) is a local application to run your DayZ servers. It automatically deploys, runs, watches, restarts and updates your server.*
 
 
-## 🔥 STILL in Devlopment ... not ready yet
 
 ### Configuration Required
 
@@ -64,7 +66,7 @@ Inspired by Omega namager template.
 
 
 
-## 🔥 STILL in Devlopment ... not ready to be on production
+## 🔥 STILL in Devlopment ... not ready for production.
 
 
 -----
