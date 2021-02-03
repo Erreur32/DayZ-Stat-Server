@@ -57,13 +57,13 @@ Inspired by Omega namager template.
 
 ### sample:
 
- [example live page](https://dayz.echosystem.fr/server/Namalsk2)
+ [example live page](https://dayz.echosystem.fr/git-DayZ-server-stat/)
  
 ![https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/assets/Screenshot_2021-02-01.png](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/assets/Screenshot_2021-02-01.png)
 
 
 
-## 🔥 STILL in Devlopment ...
+## 🔥 STILL in Devlopment ... not ready to be on production
 
 
 -----
