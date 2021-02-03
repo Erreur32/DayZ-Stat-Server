@@ -1,7 +1,9 @@
 <?php
+ini_set('display_errors', 'on');
 // include_once('./consql.php');
 // MAKE json
- header("Content-Type: application/json; charset=UTF-8; pageEncoding=UTF-8");
+
+header("Content-Type: application/json; charset=UTF-8; pageEncoding=UTF-8");
 
 include_once('./config.php');
 $urlserv = $ipserv.":".$portserv ;
@@ -9,8 +11,6 @@ $urlserv = $ipserv.":".$portserv ;
 //echo $InfoGT;
 //echo "<br><hr>";
 //$results = json_decode($_GET["x"], false);
-
-ini_set('display_errors', 'on');
 //error_reporting(E_ALL); // Display all types of error
 
 require_once('GameQ/Autoloader.php');
