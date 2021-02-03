@@ -27,10 +27,10 @@ Inspired by Omega namager for the template.
  -  mysql database (to store status server for graph) 
  >     Schema database is not ready yet.
 
- - put *statserverjson.sh* in crontab like this  for mysql insert & creation of json file:
+ - put *statserverjson.sh* in crontab like this  for mysql insert & creation of json file. (for shell bash only)
  >     */5 * * * *       /bin/sh /your/path/statserver_json.sh
  OR
- >     */5 * * * *       /usr/local/bin/php -f /your/path/dayz2json.php
+ >     */5 * * * *       /usr/local/bin/php -f /your/path/dayz2json.php > /your/path/server.json
 
 
 ### Library used:
