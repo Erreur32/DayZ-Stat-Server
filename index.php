@@ -61,7 +61,8 @@ $sec = "300";
         <title><?php echo "$title"; ?></title>
 	<meta name='description' content='<?php echo "$descript"; ?>'>
 	<meta name="author" content="Erreur32">
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="icon" type="image/png" href="/favicon.png"/>
 	<meta name="keyword" content="tox,server,dayz,map,namalsk,namalsk island">
 	<link id="theme-style" href="css/style_dark.css" rel="stylesheet">
 
@@ -582,7 +583,6 @@ $sec = "300";
 														<div class="card">
 															<div class="card-header">Player last 24	hours</div>
 																<div class="card-body">
-																<!--   // not ready yet -->
 																 <?php    include('./GraphPlayer.php'); ?>
 															</div>
 	                                                                                                        </div>

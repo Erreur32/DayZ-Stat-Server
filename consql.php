@@ -1,19 +1,19 @@
 <?php
 
+# Change to our need
+
         $servdb = "localhost";
         $userdb = "user";
         $pdb    = "pass";
         $dbname = "database";
-	$table  = "StatServer_1"; 
+	$table  = "StatServer_5"; 
 
-
-     $StatServer = $table;
-
-     $con = new mysqli($servdb, $userdb, $pdb, $dbname);
+      $StatServer = $table;
+      $con = new mysqli($servdb, $userdb, $pdb, $dbname);
 
     if ($con->connect_error) {
 	// Display the alert box  
-//		echo '<script>alert("...Connection failed with MYSQL")</script>'; 
+        //	echo '<script>alert("...Connection failed with MYSQL")</script>'; 
 		echo "<center><font color=red> ...Connection failed with MYSQL </font></center>";        
         //	die("Connection failed: " . $con->connect_error);
     }

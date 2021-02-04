@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 set_time_limit ( 4 );      // Max execution time is set to 4 seconds
 
 // Read JSON file
-$readjson = file_get_contents('../statserver.json');
+$readjson = file_get_contents('statserver.json');
 
 $data = json_decode($readjson);
 // class

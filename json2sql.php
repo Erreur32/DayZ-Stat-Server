@@ -30,7 +30,7 @@ if (!$file) quit("File read error with $filanme");
 $data = json_decode($file, true);
 $sql = "";
 foreach($data as $obj) {
-//    $keys   = implode('`,`', array_map('addslashes', array_keys($obj)));
+    $keys   = implode('`,`', array_map('addslashes', array_keys($obj)));
     $values = implode("','", array_map('addslashes', array_values($obj)));
     $sql .= "INSERT INTO `$table` (`$keys`, `Dates`) VALUES ('$values', '$date');\n";
 }
@@ -39,3 +39,6 @@ $out = pathinfo($filename, PATHINFO_FILENAME) . ".sql";
 if(!file_put_contents($out, $sql)) quit("Could not write contents to $out");
 
 quit("Written SQL data to $out");
+
+
+// php -f json2sql.php StatServer_5 server.json

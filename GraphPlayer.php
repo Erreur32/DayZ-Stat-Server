@@ -1,17 +1,15 @@
 <?php
 
-//ini_set('display_errors', 'on');
+ini_set('display_errors', 'on');
 
 include('./consql.php');
 include_once('config.php');
 
 // MYSQL table
+// $StatServer = "StatServer_20"; // set in consql.php
 
-	// $StatServer = "StatServer_20"; // set in consql.php
-
-     $queryP = "SELECT date, numplayers FROM ".$StatServer."   ORDER BY id DESC  LIMIT 80";
-     $arrPlay = $con->query($queryP);
-
+   $queryP = "SELECT date, players FROM ".$StatServer."   ORDER BY id DESC  LIMIT 80";
+   $arrPlay = $con->query($queryP);
 ?>
 
 <head>
@@ -24,12 +22,12 @@ include_once('config.php');
 </head>
 
 <body>
-
 <h3>☠  Players on  <?php echo $namemap ;?></h3>
+
 <div id="graph32"></div>
 
 <script>
-var day_data = [<?php while($row = mysqli_fetch_assoc($arrPlay)){  echo "{'Date': '".$row["date"]."', 'Players': ".$row["numplayers"]."}, "; }  ?> ];
+var day_data = [<?php while($row = mysqli_fetch_assoc($arrPlay)){  echo "{'Date': '".$row["date"]."', 'Players': ".$row["players"]."}, "; }  ?> ];
 
 Morris.Line({
   element: 'graph32',
