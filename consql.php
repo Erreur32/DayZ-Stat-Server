@@ -3,13 +3,11 @@
 //# Change with your credential here.
 //  Create Database first ;)
 
-/*
         $servdb = "localhost";
         $userdb = "user";
         $pdb    = "pass";
         $dbname = "database";
-*/
-	$table  = "StatServer_5"; 
+	$table  = "StatServer_1"; 
 
       $StatServer = $table;
       $con = new mysqli($servdb, $userdb, $pdb, $dbname);
