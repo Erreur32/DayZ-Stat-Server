@@ -1,11 +1,14 @@
 <?php
 
-# Change to our need
+//# Change with your credential here.
+//  Create Database first ;)
 
+/*
         $servdb = "localhost";
         $userdb = "user";
         $pdb    = "pass";
         $dbname = "database";
+*/
 	$table  = "StatServer_5"; 
 
       $StatServer = $table;
