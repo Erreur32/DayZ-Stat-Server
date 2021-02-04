@@ -12,11 +12,17 @@
    Inspired by Omega namager template.
    >  *The [OmegaManager](https://cftools.de/) is a local application to run your DayZ servers. It automatically deploys, runs, watches, restarts and updates your server.*
 
-### Installation
+## Installation
 
-   git clone https://git.echosystem.fr/Erreur32/DayZ-Stat-Server.git 
-   or
-   Download last archiive https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/archive/0.32.zip
+### Download Archive
+
+ git clone https://git.echosystem.fr/Erreur32/DayZ-Stat-Server.git 
+
+ or
+
+ Download last archive https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/archive/0.32.zip
+   
+   
 
 ### Configuration Required
 
@@ -27,8 +33,10 @@
     >         $modport  = "2312" ;   // Mod port omega (+10)
     >         $queryport= "27016";   // Queryport
  
+ - Omega manager (to check list mod only, but higly suggered !) 
 
-### OPTIONAL:
+
+## Crontab to fill Database.
 
  - Omega manager (to check list mod only, but higly suggered !) 
 
