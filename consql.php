@@ -4,12 +4,11 @@
 //  Create Database first ;)
 
 
-
         $servdb = "localhost";
         $userdb = "user";
         $pdb    = "pass";
         $dbname = "database";
-	$table  = "StatServer_1"; 
+        $table  = "StatServer_1";
 
       $StatServer = $table;
       $con = new mysqli($servdb, $userdb, $pdb, $dbname);
