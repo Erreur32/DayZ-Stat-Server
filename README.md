@@ -33,14 +33,16 @@ Inspired by Omega namager template.
      Create dayzstat database first + user privilege.
  >     Schema database is in table.sql
 
- - put *statserver_json.sh* in crontab for mysql insert & creation of json file. (for shell bash only)
- >## For Shell 
- >     */5 * * * *       /bin/sh /your/path/statserver_json.sh  2>&1
- OR
- ## JSON creation file
- >     */5 * * * *       /usr/local/bin/php -f /your/path/dayz2json.php > /your/path/server.json
- ## for SQL insert
- >     */5 * * * *       /usr/local/bin/php -f /your/path/dayz2json_parser_sql.php 2>&1
+ - 2 Choice for your crontab, with Shell or php. Put *statserver_json.sh* in your crontab for mysql insert & creation of json file. 
+ 
+     > ## For Shell 
+     >     */5 * * * *       /bin/sh /your/path/statserver_json.sh  2>&1
+     OR
+
+     > ## JSON creation file
+     >     */5 * * * *       /usr/local/bin/php -f /your/path/dayz2json.php > /your/path/server.json
+     > ## for SQL insert
+     >     */5 * * * *       /usr/local/bin/php -f /your/path/dayz2json_parser_sql.php 2>&1
 
 
 ### TODO
