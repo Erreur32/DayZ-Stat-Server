@@ -2,8 +2,9 @@
 
 include_once('./config.php');
 include_once('./consql.php');
+
     //   Don't touch below (or you know what you do)
- 
+
         $urlserv = $ipserv.":".$portserv ;
 
     // librarie SQ - info serv game

@@ -1,6 +1,6 @@
 <?php
 
-ini_set('display_errors', 'on');
+//ini_set('display_errors', 'on');
 
 include('./consql.php');
 include_once('config.php');
