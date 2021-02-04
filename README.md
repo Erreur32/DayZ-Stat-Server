@@ -27,14 +27,15 @@ Inspired by Omega namager template.
 
 ### OPTIONAL:
 
- - Omega manager (to check mod only) 
+ - Omega manager (to check list mod only) 
 
- -  mysql database (to store status server for graph) 
+ - mysql database (to store status server for graph) 
      Create dayzstat database first + user privilege.
  >     Schema database is in table.sql
 
- - put *statserverjson.sh* in crontab like this  for mysql insert & creation of json file. (for shell bash only)
- >     */5 * * * *       /bin/sh /your/path/statserver_json.sh
+ - put *statserver_json.sh* in crontab for mysql insert & creation of json file. (for shell bash only)
+ ## For Shell 
+ >     */5 * * * *       /bin/sh /your/path/statserver_json.sh  2>&1
  OR
  ## JSON creation file
  >     */5 * * * *       /usr/local/bin/php -f /your/path/dayz2json.php > /your/path/server.json
