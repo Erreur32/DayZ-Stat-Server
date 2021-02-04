@@ -43,6 +43,9 @@ Inspired by Omega namager template.
      >     */5 * * * *       /usr/local/bin/php -f /your/path/dayz2json_parser_sql.php 2>&1
 
 
+     Check your time zone here.
+     https://www.php.net/manual/en/timezones.others.php
+
 ### TODO
 
  - make Regex to check time serv (to auto detect it, and it's fucking hard :p)

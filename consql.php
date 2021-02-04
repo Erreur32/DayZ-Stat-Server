@@ -3,6 +3,7 @@
 //# Change with your credential here.
 //  Create Database first ;)
 
+
         $servdb = "localhost";
         $userdb = "user";
         $pdb    = "pass";

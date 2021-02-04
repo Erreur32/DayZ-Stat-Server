@@ -12,7 +12,7 @@ $sec = "300";
 
    //   Don't touch below (or you know what you do)
 
-       $urlserv = $ipserv.":".$portserv ;
+       $urlserv = $ipserv.":".$servport ;
        // need to fix if mod = 0
                 $json = file_get_contents("http://".$ipserv.":".$modport."/");
                 $objhigher=json_decode($json); //converts to an object
@@ -251,11 +251,11 @@ $sec = "300";
 									// NEED to find a good regex for this shit!
 								     if (count($objlower) == 0){      // if no mod
 									 echo $InfoGT[67].$InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72].$InfoGT[73];  
-						                  	 echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[42]. "</span> - <i class='fas  fa-moon'></i><span     style='color: white;'>x".$InfoGT[55]."  </span>";											} 
+						                  	 echo " <small style='color: grey;'>  <i class='fas  fa-sun'></i> <span style='color: white;'> x ". $InfoGT[42]. "</span> - <i class='fas  fa-moon'></i><span style='color: white;'> x ".$InfoGT[55]."  </span>";											} 
 
 									 if (count($objlower) > 0)  {
 									  echo $InfoGT[67].$InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72].$InfoGT[73].$InfoGT[74];
-                                                                        echo "<small style='color: grey;'><i class='fas  fa-sun'></i><span style='color: white;'>x". $InfoGT[41].$InfoGT[42].$InfoGT[43]. "</span> - <i class='fas  fa-moon'></i><span     style='color: white;'>x".$InfoGT[54].$InfoGT[55].$InfoGT[56]."</span>";  
+                                                                        echo " <small style='color: grey;'> <i class='fas  fa-sun'></i> <span style='color: white;'> x ". $InfoGT[41].$InfoGT[42].$InfoGT[43]. "</span> - <i class='fas  fa-moon'></i><span style='color: white;'> x ".$InfoGT[54].$InfoGT[55].$InfoGT[56]."</span>";  
 											}
 /*
 
@@ -451,24 +451,10 @@ $sec = "300";
 																				</div>
 																				<div class="col-sm-7">
 																		         	<a  href="#"><?php echo  $ipserv;   ?></a><br>
-																			 	<a  href="#"><?php echo  $portserv; ?></a>
+																			 	<a  href="#"><?php echo  $servport; ?></a>
 																				</div>
 																			</div>
 																		</div>	
-																		
-																		<div class="row">
-																			<div class="form-check form-check-inline"
-																				style="width: 100%	!important;">
-																				<div class="col-sm-5">
-																					<label class="col-form-label" for="date-input">
-																						<strong>Total User</strong>
-																					</label>
-																				</div>
-																				<div class="col-sm-7">
-																					<i class="fa fa-user"> (Databse is empty)</i>	
-																				</div>
-																			</div>
-																		</div>
 																		<div class="row">
 																			<div class="form-check	form-check-inline"
 																				style="width: 100%	!important;">
@@ -483,6 +469,20 @@ $sec = "300";
 																				</div>
 																			</div>
 																		</div>
+																		<div class="row">
+                                                                                                                                                        <div class="form-check form-check-inline"
+                                                                                                                                                                style="width: 100%      !important;">
+                                                                                                                                                                <div class="col-sm-5">
+                                                                                                                                                                        <label class="col-form-label" for="date-input">
+                                                                                                                                                                                <strong>Total User</strong>
+                                                                                                                                                                        </label>
+                                                                                                                                                                </div>
+                                                                                                                                                                <div class="col-sm-7">
+                                                                                                                                                                        <i class="fa fa-user"> (..)</i>
+                                                                                                                                                                </div>
+                                                                                                                                                        </div>
+                                                                                                                                                </div>
+
 																		<div class="row">
 																			<div class="form-check	form-check-inline"
 																				style="width: 100% !important;">
@@ -692,9 +692,9 @@ $sec = "300";
                                                                                         <div class="tab-pane tab_content fade"  id="maptab" role="tabpanel" aria-labelledby="map-tab">
                                                                                                 <div class="col-lg-12 col-sm-12">
                                                                                                         <div class="card">
-                                                                                                                <div class="card-header" style="padding: 15px;"> <i class="fas fa-map"></i>  MAP  </div>
+                                                                                                                <div class="card-header" style="padding: 15px;"> <i class="fas fa-map"></i>  MAP <span style='color: grey;'><?php  echo $Info['Map']; ?></span> </div>
                                	                                                      <!--a href=""--> <div  style="width:100%;height:620px;">
-												<iframe src="https://dayz.ginfo.gg/<?php echo $namemap; ?>/#c=37;-4;3" frameborder="0" allowfullscreen    style="position:absolute;top:0;left:0;width:100%;height:590px;" security="restricted"></iframe>
+												<iframe src="https://dayz.ginfo.gg/<?php echo $namemap; ?>/#c=37;-4;3" frameborder="0" allowfullscreen style="width:100%;height:600px;" security="restricted"></iframe>
 
 											<!--img src="imagemap.jpg" style="width:100%;max-width:1200px;height:auto;padding:5px;" class="arrondie2" -->
 												</div>

@@ -14,7 +14,7 @@ include_once('config.php');
 //include_once('consql.php');
 
 //var_dump(json_decode($readjson));
-    $urlserv = $ipserv.":".$portserv ;
+    $urlserv = $ipserv.":".$servport ;
 
     // librarie SQ - info serv game
         require  'SQ_/bootstrap.php';

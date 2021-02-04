@@ -5,7 +5,7 @@ include_once('./consql.php');
 
     //   Don't touch below (or you know what you do)
 
-        $urlserv = $ipserv.":".$portserv ;
+        $urlserv = $ipserv.":".$servport ;
 
     // librarie SQ - info serv game
         require  'SQ_/bootstrap.php';
@@ -38,9 +38,10 @@ include_once('./consql.php');
 
         $Timer = Number_Format( MicroTime( true ) - $Timer, 4, '.', '' );
 
- $InfoGT = $Info['GameTags'];
+	$InfoGT = $Info['GameTags'];
 
-
+// DEBUG
+/*
 print_r($Info);
 echo "<br><hr>";
 
@@ -55,9 +56,11 @@ echo "Os: "           .$Info['Os']         . "<br>";
 echo "Version: "      .$Info['Version']    . "<br>";
 echo "Port: "         .$Info['GamePort']       . "<br>";
 echo "GameID: "         .$Info['GameID']       . "<br>";
-
 echo "<hr>test SQL";
+*/
 
+
+// Variables
 $HostName = $Info['HostName']   ;
 $Game     = $Info['ModDesc'] ;
 $Version  = $Info['Version'] ;
@@ -71,14 +74,18 @@ $GameID   = $Info['GameID'] ;
 
 
 // set the default timezone to use. Available since PHP 5.1
-date_default_timezone_set('UTC+1');
+//   https://www.php.net/manual/en/timezones.others.php
+date_default_timezone_set('Etc/GMT-1');
+//date_default_timezone_set('Europe/Paris');
 
 $date = date('Y-m-d H:i:s');
 
-$insql = "INSERT INTO $table (date,name,game,map,version,players,maxplayers,ping,timeserver,hive,battleye,connect,secure) VALUES  ('$date','$HostName', '$Game', '$Map', '$Version',  '$Players', '$MaxPlayers', '0', '2:20', 'hive', 'battleye', '$urlserv', '$Secure')";
+// SQL insert Query.
+$insql = "INSERT INTO $table (date,name,players,maxplayers,map,game,version,timeserver,timespeed,timespeedn,battleye,hive,connect,secure,ping) VALUES ('$date','$HostName','$Players','$MaxPlayers','$Map','$Game','$Version','2:20','2','4','battleye','hive','$urlserv','$Secure','666')";
 
+// Check if errors with SQL query
 if (mysqli_query($con, $insql)) {
-  echo "New record created successfully";
+ // echo "New record created successfully";
 } else {
   echo "Error: " . $insql . "<br>" . mysqli_error($con);
 }
