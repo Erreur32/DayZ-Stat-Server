@@ -34,7 +34,7 @@ Inspired by Omega namager template.
  >     Schema database is in table.sql
 
  - put *statserver_json.sh* in crontab for mysql insert & creation of json file. (for shell bash only)
- ## For Shell 
+ >## For Shell 
  >     */5 * * * *       /bin/sh /your/path/statserver_json.sh  2>&1
  OR
  ## JSON creation file
