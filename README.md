@@ -5,13 +5,12 @@
 
 ![https://dayz.echosystem.fr](https://git.echosystem.fr/repo-avatars/191)
 
-☠  TEAM DayZ -  https://dayz.echosystem.fr ☠ 
+☠  TEAM DayZ 🆃🅾🆇 https://dayz.echosystem.fr ☠ 
 
 
 #   Simple live Stat for Dayz Standalone server ☠.
-Inspired by Omega namager template.
-
-*The [OmegaManager](https://cftools.de/) is a local application to run your DayZ servers. It automatically deploys, runs, watches, restarts and updates your server.*
+   Inspired by Omega namager template.
+   >  *The [OmegaManager](https://cftools.de/) is a local application to run your DayZ servers. It automatically deploys, runs, watches, restarts and updates your server.*
 
 
 
@@ -27,20 +26,20 @@ Inspired by Omega namager template.
 
 ### OPTIONAL:
 
- - Omega manager (to check list mod only) 
+ - Omega manager (to check list mod only, but higly suggered !) 
 
  - mysql database (to store status server for graph) 
      Create dayzstat database first + user privilege.
- >     Schema database is in table.sql
+ >     Checkout Schema database in SQL/table.sql
 
  - **2 Differents way for your crontab** with Shell or php. Put *statserver_json.sh* in your crontab for mysql insert & creation of json file. 
  
      > ## For Shell (SQL insert + json)
-     >     */5 * * * *       /bin/sh /your/path/statserver_json.sh  2>&1
+     >       */5 * * * *       /usr/sbin/sh /pathto/SQL/statserver_json.sh  2>&1
      OR
 
      > ## For php (SQL insert)
-     >     */5 * * * *       /usr/local/bin/php -f /your/path/dayz2json_parser_sql.php 2>&1
+     >       */5 * * * *       /usr/local/bin/php -f /your/path/SQL/dayz2json_parser_sql.php 2>&1
 
 
      Check your time zone here.
@@ -48,11 +47,11 @@ Inspired by Omega namager template.
 
 ### TODO
 
- - make Regex to check time serv (to auto detect it, and it's fucking hard :p)
- 
- - Need to finish SQL part for stat USER
- 
- - Admin section with usefull info from your log server.
+     - make ~~Regex to catch~~ time serv to auto detect it, and it's fucking hard :p)
+
+     - Need to finish SQL part for stat USER
+
+     - Admin section with usefull info from your log server.
 
  
 
