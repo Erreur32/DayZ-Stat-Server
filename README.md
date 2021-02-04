@@ -12,7 +12,11 @@
    Inspired by Omega namager template.
    >  *The [OmegaManager](https://cftools.de/) is a local application to run your DayZ servers. It automatically deploys, runs, watches, restarts and updates your server.*
 
+### Installation
 
+   git clone https://git.echosystem.fr/Erreur32/DayZ-Stat-Server.git 
+   or
+   Download last archiive https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/archive/0.32.zip
 
 ### Configuration Required
 
