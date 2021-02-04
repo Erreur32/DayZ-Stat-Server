@@ -1,8 +1,8 @@
 <?php
 
- ini_set("allow_url_fopen", 1);
+// ini_set("allow_url_fopen", 1);
 
-     // Edit this  ->
+     // Need to  Edit this  
 /*
         $ipserv   = "103.58.149.102" ; // IP server game
         $portserv = "2302"  ; // Game Server Port
@@ -24,8 +24,10 @@
 	$imagemap = "chernarus.jpg";
 
 
- $urlserv = $ipserv.":".$portserv ;	
 
+	// Don't touch below
+
+	$urlserv = $ipserv.":".$portserv ;	
 
 ?>
 
