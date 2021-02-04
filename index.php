@@ -10,46 +10,6 @@ $sec = "300";
  include_once('./consql.php');
  include_once('./config.php');
 
-   //   Don't touch below (or you know what you do)
-
-       $urlserv = $ipserv.":".$servport ;
-       // need to fix if mod = 0
-                $json = file_get_contents("http://".$ipserv.":".$modport."/");
-                $objhigher=json_decode($json); //converts to an object
-                $objlower = $objhigher[0];     // if the json response its multidimensional this lowers it
-                $objlower=json_decode($json);  //converts to an array of objects
-
-    // librarie SQ - info serv game
-        require  'SQ_/bootstrap.php';
-        use xPaw\SourceQuery\SourceQuery;
-
-        define( 'SQ_SERVER_ADDR', "${ipserv}" );     // IP server
-        define( 'SQ_SERVER_PORT', "${queryport}" );  // YOUR QUERY PORT
-        define( 'SQ_TIMEOUT',     3 );
-        define( 'SQ_ENGINE',      SourceQuery::SOURCE );
-
-        $Timer = MicroTime( true );
-        $Query = new SourceQuery( );
-
-        $Info    = Array( );
-        $Players = Array( );
-
-        try
-        {
-                $Query->Connect( SQ_SERVER_ADDR, SQ_SERVER_PORT, SQ_TIMEOUT, SQ_ENGINE );
-
-                $Info    = $Query->GetInfo( );
-                $Players = $Query->GetPlayers( );
-        }
-        catch( Exception $e )
-        {
-                $Exception = $e;
-        }
-
-        $Query->Disconnect( );
-
-        $Timer = Number_Format( MicroTime( true ) - $Timer, 4, '.', '' );
-        $InfoGT = $Info['GameTags'];
 ?>
 
 
@@ -197,9 +157,8 @@ $sec = "300";
 											 
 											<?php echo  $Info['HostName'] ; ?>
 											<!--<i class="flag-icon h5 flag-icon-fr"></i>-->
-										
-										</h3>
-										<h5><span style="color:grey;"><?php  echo " $namemap" ?>  </span></h5>
+										 </h3>
+										      <h5><span style="color:grey;"><?php  echo $Info['Map']; ?>  </span></h5>
 											<span class="label label-<?php echo $Timer > 1.0 ? 'danger' : 'success'; ?>"><?php echo $Timer; ?>s</span>
 
 									</div>
@@ -581,7 +540,7 @@ $sec = "300";
 													 
 													<div class="col-lg-12 col-sm-16">
 														<div class="card">
-															<div class="card-header">Player last 24	hours</div>
+															<div class="card-header">Player count last 12 hours</div>
 																<div class="card-body">
 																 <?php    include('./GraphPlayer.php'); ?>
 															</div>
@@ -737,9 +696,9 @@ $sec = "300";
 
 
 	<footer class="app-footer">
-	<div style="text-align:center;"> <span style="text-align:center;"> © 2020 (-ToX-) - <a href="https://git.echosystem.fr/Erreur32/DayZ-Stat-Server">Dayz-server-stats</a> by  <a href="">Erreur32</a> </span>
-	 </div>
-	<div class="ml-auto"> <a href="server.json">JSON</a>
+	<div style="text-align:center;"> <span style="text-align:center;"> 🆃🅾🆇  © 2020  - <a href="https://git.echosystem.fr/Erreur32/DayZ-Stat-Server">Dayz-server-stats</a> by  <a href="">Erreur32</a> </span>
+	 </div> 
+	<div class="ml-auto">  <a href="server.json">JSON</a> | 
 		<?php
 			$time = microtime();
 			$time = explode(' ', $time);

@@ -90,6 +90,31 @@ if (mysqli_query($con, $insql)) {
   echo "Error: " . $insql . "<br>" . mysqli_error($con);
 }
 
+
+/*
+if ($con->connect_error) {
+numplayers="0"
+players="0"
+ping="0"
+
+        //      die("Connection failed: " . $con->connect_error);
+ }
+ else
+ {
+      // echo "Connect Successfully";
+ }
+
+insert_mysql_down() {
+numplayers="0"
+players="0"
+ping="0"
+mysql --host=$DB_SERV --user=$DB_USER --password=$DB_PASSWD --database=$DB_NAME << EOF
+ SET NAMES utf8;
+ insert into $TABLE (\`date\`,\`name\`,\`game\`,\`map\`,\`version\`,\`requiredVersion\`,\`numplayers\`,\`players\`,\`maxplayers\`,\`ping\`,\`timeserver\`,\`hive\`,\`battleye\`,\`connect\`,\`secure\`) VALUES 
+ ("$datesql","OFFLINE","$game","$map","$version","$requiredVersion","$numplayers","$players","$maxplayers","$ping","$timeserver","$hive","$battleye","$connect","$secure");
+}
+*/
+
 mysqli_close($con);
 
 

@@ -22,7 +22,7 @@ include_once('config.php');
 </head>
 
 <body>
-<h3>☠  Players on  <?php echo $namemap ;?></h3>
+<h3>☠  Players on <small style='color: grey;'>  <?php echo  $Info['HostName']; ?></small></h3>
 
 <div id="graph32"></div>
 
