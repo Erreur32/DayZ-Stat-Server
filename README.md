@@ -44,6 +44,7 @@
      Create dayzstat database first + user privilege.
  >     Checkout Schema database in SQL/table.sql
 
+
  - **2 Differents way for your crontab** with Shell or php. Put *statserver_json.sh* in your crontab for mysql insert & creation of json file. 
  
      > ## For Shell (SQL insert + json)
