@@ -74,9 +74,9 @@ echo "<h1>Payes ta regex</h1>";
 echo "<pre>".$InfoGT."</pre>";
 echo "<br>";
 
-$result = explode(",", $InfoGT);
-print_r($result);
-echo "<br> 2222222";
+//$result = explode(",", $InfoGT);
+//print_r($result);
+echo "<br> ";
 
 $re = '/[^,]...(Hive)/';
 $rt = preg_grep($re, array($InfoGT));

@@ -131,11 +131,9 @@ $sec = "300";
 		$time = $time[1] + $time[0];
 		$start = $time;
 
-
                 if (empty($Info['HostName']))  {
                 $Info['HostName'] = "<h1>OFF LINE</h1>" ;
                 }
-
 ?> 
 		<main class="main" style="margin-top: 10px">
 

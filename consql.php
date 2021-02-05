@@ -11,6 +11,7 @@
         $table  = "StatServer_1";
 
 
+
       $StatServer = $table;
       $con = new mysqli($servdb, $userdb, $pdb, $dbname);
 

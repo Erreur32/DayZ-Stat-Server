@@ -4,18 +4,18 @@
 
 // Need to  Edit this  
 
-/*
+
         $ipserv   = "103.58.149.102" ; // IP server game
         $servport = "2302"  ; // Game Server Port
         $modport  = "2312"  ; // Mod port omega (+10)
         $queryport= "27016" ; // Queryport
 
-*/
+/*
    $ipserv   = "82.64.214.194" ; // IP server game
    $servport = "3201" ; // Game Server Port
    $modport  = "3211" ; // Mod port omega (+10)
    $queryport= "27001" ; // Queryport
-
+*/
 
 	$title    = "DayZ Stat SERVER Clan | by TOX" ; // Web title page
 	$descript = "Your Clan/server desciption";  // Your clan/server description 
@@ -29,10 +29,14 @@
         $urlserv = $ipserv.":".$servport ;
       // need to fix if mod = 0
         $json      = file_get_contents("http://".$ipserv.":".$modport."/"); // get info from server
+	if (!$json) {
+        //echo "The variable is not empty";
         $objhigher = json_decode($json);  //converts to an object
         $objlower  = $objhigher[0];       // if the json response its multidimensional this lowers it
         $objlower  = json_decode($json);  //converts to an array of objects
-
+	} else {
+	 $mods      = "";
+	}
       // librarie SQ - info serv game
         require  'SQ_/bootstrap.php';
         use xPaw\SourceQuery\SourceQuery;
