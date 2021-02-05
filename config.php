@@ -41,7 +41,9 @@
 	} else {
 	 $mods      = "";
 	}
-      // librarie SQ - info serv game
+
+
+       // librarie SQ - info serv game
         require  'SQ_/bootstrap.php';
         use xPaw\SourceQuery\SourceQuery;
         define( 'SQ_SERVER_ADDR', "${ipserv}" );     // IP server
@@ -71,11 +73,10 @@
 
 
         // DEBUG
-        /*
-        print_r($Info);
-        */
+          /*        print_r($Info);        */
 
         // Variables
+
         $HostName   = $Info['HostName']   ;
         $Game       = $Info['ModDesc'] ;
         $Version    = $Info['Version'] ;
@@ -88,6 +89,39 @@
         $GameID     = $Info['GameID'] ;
         $ping       = "666";
 //      $mods       = "0";
+
+// REGEX de la mort.
+
+// time server
+$regtimsev  = "/[0-9]{1,2}[:][0-9]{1,2}/";
+$result     =  preg_grep($regtimsev, explode(",", $InfoGT));
+ foreach ($result as $key => $val) { $timeserver = $val; }
+
+// speedtime dayz
+$regtimeacc = "/etm[0-9]{1,2}[.][0-9]{1}/";
+$result     =  preg_grep($regtimeacc, explode(",", $InfoGT));
+ foreach ($result as $key => $val) { $timespeed = trim($val,"entm.0"); }
+
+// speedtime night
+$regtimeacn = "/entm[0-9]{1,2}[.][0-9]{1}/";
+$result     =  preg_grep($regtimeacn, explode(",", $InfoGT));
+ foreach ($result as $key => $val) { $timespeedn = trim($val,"entm.0"); }
+
+// HIVE
+$reghive   = '/[^,]...(Hive)/';
+$result    =  preg_grep($reghive, explode(",", $InfoGT));
+ foreach ($result as $key => $val) { $hive = $val; }
+
+// battleye
+$regbattle = "/(battleye)/";
+$result    =  preg_grep($regbattle, explode(",", $InfoGT));
+ foreach ($result as $key => $val) { $battleye  = $val; }
+
+// mod 
+$regmod = "/(mod)/";
+$result =  preg_grep($regmod, explode(",", $InfoGT));
+ foreach ($result as $key => $val) { $mods = $val; }
+
 
 ?>
 
