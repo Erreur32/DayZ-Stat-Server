@@ -1,7 +1,7 @@
 ## Hi Dayz Survivor !!
 
 
-## 🔥 STILL in Devlopment ... not ready yet
+## 🔥 STILL in Development
 
 ![https://dayz.echosystem.fr](https://git.echosystem.fr/repo-avatars/191)
 
@@ -85,13 +85,13 @@
 >#### For Shell (SQL insert + json)
 >       */5 * * * *       /usr/sbin/sh /pathto/SQL/statserver_json.sh  2>&1
     
- OR
+ OR (recommended)
 
 >#### For php (SQL insert)
 >      */5 * * * *       /usr/local/bin/php -f /your/path/SQL/dayz2json_parser_sql.php 2>&1
 
 
-  Check your time zone here. https://www.php.net/manual/en/timezones.others.php
+  Check your time zone here. https://www.php.net/manual/en/timezones.others.php and adapt in dayz2json_parser_sql.php.
 
 
 ## Et Voilà ! 
@@ -100,12 +100,9 @@ ENJOY :)
 
 ### TODO
 
-     - make ~~Regex to catch~~ time serv to auto detect it, and it's fucking hard :p)
-
-     - Need to finish SQL part for stat USER
+     - Need to finish SQL part for stat USER NAME ;)
 
      - Admin section with usefull info from your log server.
-
  
 
 
@@ -113,22 +110,18 @@ ENJOY :)
 ### Library used:
 
 >  [PHP-Source-Query](https://github.com/xPaw/PHP-Source-Query) -     PHP library to query servers that implement Steam query protocol (also known as Source Engine Query protocol) 
-
+>  Morris  -   library for graph
  
  
 
 ### sample:
 
 > [example live page](https://dayz.echosystem.fr/git-DayZ-server-stat/)
- 
-![https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/assets/Screenshot_2021-02-04.png](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/assets/Screenshot_2021-02-04.png)
 
 
 
-## 🔥 STILL in Devlopment ... not ready for production.
 
 
 -----
 Website: [dayz.echosystem.fr](https://dayz.echosystem.fr)
-
 Author : Erreur32
