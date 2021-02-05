@@ -19,7 +19,7 @@
 ### #1 Download Archive
 
 
-  Download last archive https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/archive/0.34.zip
+  Download last archive https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/archive/0.32.zip
    
      # or Use the lastest version with git 
       git clone https://git.echosystem.fr/Erreur32/DayZ-Stat-Server.git 
