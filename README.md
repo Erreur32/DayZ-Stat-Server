@@ -19,7 +19,7 @@
 ### #1 Download Archive
 
 
- Download last archive https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/archive/0.32.zip
+  Download last archive https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/archive/0.34.zip
    
      # or Use the lastest version with git 
       git clone https://git.echosystem.fr/Erreur32/DayZ-Stat-Server.git 
@@ -46,17 +46,11 @@
 >         -- Adminer 4.7.8 MySQL dump
 > 
 >         SET NAMES utf8;
->         SET time_zone = '+00:00';
 >         SET foreign_key_checks = 0;
 >         SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 > 
 >         SET NAMES utf8mb4;
 > 
->         DROP DATABASE IF EXISTS `dayzstat`;
->         CREATE DATABASE `dayzstat` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
->         USE `dayzstat`;
-> 
->         DROP TABLE IF EXISTS `StatServer_5`;
 >         CREATE TABLE `StatServer_5` (
 >           `id` int(11) NOT NULL AUTO_INCREMENT,
 >           `date` datetime DEFAULT NULL ON UPDATE current_timestamp(),
