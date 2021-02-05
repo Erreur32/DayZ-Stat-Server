@@ -71,45 +71,79 @@ echo "Version: "      .$Version    . "<br>";
 echo "Port: "         .$GamePort   . "<br><hr>";
 
 echo "<h1>Payes ta regex</h1>";
+$result = explode(",", $InfoGT);
+print_r($result);
 echo "<pre>".$InfoGT."</pre>";
-echo "<br>";
+//echo "<table><tr>";
+echo "<hr>";
 
-//$result = explode(",", $InfoGT);
-//print_r($result);
-echo "<br> ";
+?>
 
-$re = '/[^,]...(Hive)/';
-$rt = preg_grep($re, array($InfoGT));
-print_r($rt);
-echo "<br><hr>";
+<h2> example</h2>
+<pre>
 
+$regtimeacc  = "/etm([0-9]{1,2}[.][0-9]{1})/";<br>
+$result =  preg_grep($regtimeacc, explode(",", $InfoGT));<br>
+foreach ($result as $key => $val) {<br>
+   echo $val;<br>
+}<br>
+</pre>
+
+<?php
+echo "<hr>";
+echo "<pre>  '/(battleye)/' </pre> ";
 $regtimsev = "/(battleye)/";
 $result =  preg_grep($regtimsev, explode(",", $InfoGT));
 //print_r($result);
-echo $result[0];
+//echo $result[0];
+foreach ($result as $key => $val) {
+   echo $val;
+}
 echo "<br><hr>";
 
+echo "<pre> '/[^,]...(Hive)/'</pre>";
+$re = '/[^,]...(Hive)/';
 $result =  preg_grep($re,explode(",", $InfoGT));
-//print_r( preg_grep($re, array($InfoGT)));
-echo $result[2];
+foreach ($result as $key => $val) {
+   echo $val;
+}
 echo "<br><hr>";
 
+echo "<pre>  '/[0-9]{1,2}[:][0-9]{1,2}/' </pre>";
 $regtimsev = "/[0-9]{1,2}[:][0-9]{1,2}/";
 $result =  preg_grep($regtimsev, explode(",", $InfoGT));
-//print_r($result);
-echo $result[8];
+foreach ($result as $key => $val) {
+   echo $val;
+}
 echo "<br><hr>";
 
-$regtimeacc  = "/([0-9][.][0-9]{1})/";
+echo "<pre>  '/(mod)/' </pre>";
+$regmod = "/(mod)/";
+$result =  preg_grep($regmod, explode(",", $InfoGT));
+foreach ($result as $key => $val) {
+   echo $val;
+}
+
+echo "<br><hr>";
+
+echo "<pre> '/etm([0-9]{1,2}[.][0-9]{1})/' </pre>";
+$regtimeacc  = "/etm([0-9]{1,2}[.][0-9]{1})/";
 $result =  preg_grep($regtimeacc, explode(",", $InfoGT));
 //print_r($result);
-echo $result[5];
+//echo $result[5];
+foreach ($result as $key => $val) {
+   echo $val;
+}
 echo "<br><hr>";
-
-$regtimeacn  = "/([0-9][.][0-9]{1})/";
+//echo "<pre> '/entm[0-9]{1,2}[.][0-9]{1}/' </pre>";
+$regtimeacn  = "/entm[0-9][.][0-9]{1}/";
+echo "<pre> .$regtimeacn.</pre>";
 $result =  preg_grep($regtimeacn, explode(",", $InfoGT));
 //print_r($result);
-echo $result[6];
+//echo $result[6];
+foreach ($result as $key => $val) {
+   echo $val;
+}
 
 echo "<br><hr>";
 
@@ -133,10 +167,11 @@ echo $fl_array;
 
 
 echo "<hr>";
-$re = '/[0-9]{1,2}[:][0-9]{1,2}/m';
-$str = 'battleye,external,privHive,shard,lqs0,etm2.000000,entm5.500000,mod,23:17';
 
-preg_match_all($re, $str, $matches, PREG_SET_ORDER, 0);
+$re = '/[0-9]{1,2}[:][0-9]{1,2}/m';
+//$str = 'battleye,external,privHive,shard,lqs0,etm2.000000,entm5.500000,mod,23:17';
+
+preg_match_all($re, $InfoGT, $matches, PREG_SET_ORDER, 0);
 
 // Print the entire match result
 //var_dump($matches);
@@ -150,13 +185,8 @@ echo $encode;
 echo "<br>";
 
 //echo $matches[0];
-$output = implode(",", array($str));
+$output = implode(",", array($InfoGT));
 echo $output;
-echo "<br>";
-$output1 = implode(",", array($matches));
-echo $output1;
-echo "<br>";
-
 
 
 ?>

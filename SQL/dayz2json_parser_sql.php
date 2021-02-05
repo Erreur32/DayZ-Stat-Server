@@ -34,7 +34,7 @@ $insql = "INSERT INTO $table (date,name,players,maxplayers,map,game,version,time
 
 mysqli_close($con);
 //exit ;
-}
+} else {
 
 // REGEX TIME
 $regtimsev  = "/[0-9]{1,2}[:][0-9]{1,2}/";
@@ -74,7 +74,7 @@ if (mysqli_query($con, $insql)) {
 }
 
 mysqli_close($con);
-
+}
 
 // end
 

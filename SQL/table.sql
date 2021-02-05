@@ -20,7 +20,7 @@ CREATE TABLE `StatServer_5` (
   `timeserver` varchar(12) DEFAULT NULL,
   `timespeed` varchar(5) DEFAULT NULL,
   `timespeedn` varchar(5) DEFAULT NULL,
-  `mod` varchar(5) DEFAULT NULL,
+  `mods` varchar(5) DEFAULT NULL,
   `battleye` tinytext DEFAULT NULL,
   `hive` varchar(11) DEFAULT NULL,
   `connect` varchar(32) DEFAULT NULL,

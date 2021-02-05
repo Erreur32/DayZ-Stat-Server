@@ -1,0 +1,24 @@
+
+Array
+(
+    [Protocol] => 17
+    [HostName] => [TH] F2P SERVER | Chernarus Map | No Mod | F2P.IN.TH |
+    [Map] => chernarusplus
+    [ModDir] => dayz
+    [ModDesc] => DayZ
+    [AppID] => 0
+    [Players] => 18
+    [MaxPlayers] => 60
+    [Bots] => 0
+    [Dedicated] => d
+    [Os] => w
+    [Password] => 
+    [Secure] => 1
+    [Version] => 1.10.153598
+    [ExtraDataFlags] => 177
+    [GamePort] => 2302
+    [ServerID] => 90142715919842311
+    [GameTags] => battleye,external,privHive,shard,lqs0,etm12.000000,entm2.000000,mod,22:23
+    [GameID] => 221100
+)
+
