@@ -10,24 +10,23 @@ error_reporting(E_ALL); // Display all types of error
 //$myJSON = json_decode(utf8_encode($readjson), true);
 
 
-include_once('config.php');
+include_once('../config.php');
 //include_once('consql.php');
 
 //var_dump(json_decode($readjson));
     $urlserv = $ipserv.":".$servport ;
 
     // librarie SQ - info serv game
-        require  'SQ_/bootstrap.php';
+        require  '../SQ_/bootstrap.php';
         use xPaw\SourceQuery\SourceQuery;
 
-        define( 'SQ_SERVER_ADDR', "${ipserv}" );     // IP server
-        define( 'SQ_SERVER_PORT', "${queryport}" );  // YOUR QUERY PORT
-        define( 'SQ_TIMEOUT',     3 );
-        define( 'SQ_ENGINE',      SourceQuery::SOURCE );
+        define( '../SQ_SERVER_ADDR', "${ipserv}" );     // IP server
+        define( '../SQ_SERVER_PORT', "${queryport}" );  // YOUR QUERY PORT
+        define( '../SQ_TIMEOUT',     3 );
+        define( '../SQ_ENGINE',      SourceQuery::SOURCE );
 
         $Timer = MicroTime( true );
         $Query = new SourceQuery( );
-
         $Info    = Array( );
         $Players = Array( );
 
@@ -76,10 +75,10 @@ echo "<pre>".$InfoGT."</pre>";
 echo "<br>";
 
 $result = explode(",", $InfoGT);
-$re = '/[^,]...(Hive)/';
 print_r($result);
-echo "<br>";
+echo "<br> 2222222";
 
+$re = '/[^,]...(Hive)/';
 $rt = preg_grep($re, array($InfoGT));
 print_r($rt);
 echo "<br><hr>";
