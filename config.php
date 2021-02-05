@@ -31,20 +31,22 @@
 // Don't touch below
 //
 
-        $urlserv = '$ipserv.":". $portserv' ;
-        $json      = file_get_contents("http://".$ipserv.":".$modport."/"); // get info from server
+        $urlserv = $ipserv.":".$servport ;
+        $json    = file_get_contents("http://".$ipserv.":".$modport."/"); // get info from server
 
+	$modnum  = json_decode($json);
+
+
+/*
 //	if (!$json) {
 //echo "The variable is not empty";
-
-        $objhigher = json_decode($json);  //converts to an object
+     //   $objhigher = json_decode($json);  //converts to an object
 //        $objlower  = $objhigher[0];       // if the json response its multidimensional this lowers it
-        $objlower  = json_decode($json);  //converts to an array of objects
-
+      //  $objlower  = json_decode($json);  //converts to an array of objects
 //	} else {
 //	 $mods      = "";
 //	}
-
+*/
 
        // librarie SQ - info serv game
         require  'SQ_/bootstrap.php';

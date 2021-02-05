@@ -5,8 +5,10 @@ include_once('./consql.php');
 
  // set the default timezone to use. Available since PHP 5.1
  // https://www.php.net/manual/en/timezones.others.php
+
    date_default_timezone_set('Etc/GMT-1');
- //date_default_timezone_set('Europe/Paris');
+   //date_default_timezone_set('Europe/Paris');
+
    $date = date('Y-m-d H:i:s');
 
 // if server down update sql
@@ -29,7 +31,7 @@ $insql = "INSERT INTO $table (date,name,players,maxplayers,map,game,version,time
  if (mysqli_query($con, $insql)) {
     // echo "New record created successfully";
    } else {
-     echo "Error: " . $insql . "<br>" . mysqli_error($con);
+     echo "Error:  . $insql . <br>" . mysqli_error($con);
    }
 
 mysqli_close($con);
@@ -75,9 +77,9 @@ $insql = "INSERT INTO $table (date,name,players,maxplayers,map,game,version,time
 
 // Check if errors with SQL query
 if (mysqli_query($con, $insql)) {
-// DEBUG
-//   echo "New record created successfully";    echo $insql;
- } else {   echo "Error: " . $insql . "<br>" . mysqli_error($con); }
+//   echo "New record created successfully"; 
+//   echo $insql;
+ } else {   echo "SQL to inject: \n" . $insql . "<br>" . mysqli_error($con); }
 
 mysqli_close($con);
 }

@@ -177,7 +177,7 @@ $sec = "300";
 											<div class="col-md-2 col-xs-12 border-right">
 												<div class="">
 													<h5 class="description-header">
-										<?php  //echo count($objlower)
+										<?php  //echo count($modnum)
 											echo  $timeserver ;
 											echo " <small style='color: grey;'>  <i class='fas  fa-sun'></i> <span style='color: white;'> x ".$timespeed."</span> - <i class='fas  fa-moon'></i><span style='color: white;'> x ".$timespeedn."  </span>";
 
@@ -281,7 +281,7 @@ $sec = "300";
 														<div class="callout callout-warning">
 															<small class="text-muted">MOD actif</small>
 															<br>
-															<strong class="h4"><span style="color: #FFC107;"><?php echo count($objlower); ?></span></strong>
+															<strong class="h4"><span style="color: #FFC107;"><?php echo count($modnum); ?></span></strong>
 															<div class="chart-wrapper">
 																<canvas id="sparkline-chart-1" width="100"	height="30"></canvas>
 															</div>
@@ -405,7 +405,7 @@ $sec = "300";
 																				</div>
 																				<div class="col-sm-7">
 																			<!--a href="mod_server.php"--><span class="badge badge-light">	
-																				<b><?php echo count($objlower); ?></b>	<span class="text-muted"> Mods	</span></span><!--/a-->
+																				<b><?php echo count($modnum); ?></b>	<span class="text-muted"> Mods	</span></span><!--/a-->
 																				</div>
 																			</div>
 																		</div>
@@ -504,7 +504,7 @@ $sec = "300";
 
 																<p class="before-list">
 																	<center>
-																		<span style="padding: 5px 0px 2px 20px;"><?php echo count($objlower); ?>   MODS	</span>
+																		<span style="padding: 5px 0px 2px 20px;"><?php echo count($modnum); ?>   MODS	</span>
 																		<span style="padding: 5px 0px 2px 20px;">IP:	<span style="color: orange;"><?php echo  $urlserv; ?>	</span></span>
 																	</center>
 																</p>
@@ -521,8 +521,8 @@ $sec = "300";
 
 																	<tbody>
 																		 <tr><td><br></td><td></td><br></tr>
-							                                   			    <?php $objlower=json_decode($json); //converts to an array of objects
-							                                          		    foreach( $objlower as $item ) { ?>
+							                                   			    <?php $modnum=json_decode($json); //converts to an array of objects
+							                                          		    foreach( $modnum as $item ) { ?>
 				                        				         		 <tr>
 				                               				     			 <td><a href="http://steamcommunity.com/sharedfiles/filedetails/?id=<?php echo $item->steamWorkshopId?>" data-type="Link"><?php echo $item->name; ?></a></td>
         								                         		 </tr>
