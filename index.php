@@ -655,9 +655,9 @@ $sec = "300";
 
 
 	<footer class="app-footer">
-	<div style="text-align:center;"> <span style="text-align:center;"> 🆃🅾🆇  © 2020  - <a href="https://git.echosystem.fr/Erreur32/DayZ-Stat-Server">Dayz-server-stats</a> by  <a href="">Erreur32</a> </span>
+	<div style="text-align:center;"> <span style="text-align:center;"> 🆃🅾🆇  © 2020  - <a href="https://git.echosystem.fr/Erreur32/DayZ-Stat-Server">Dayz-server-stats</a> by  <a href="https://echosystem.fr/erreur32">Erreur32</a> </span>
 	 </div> 
-	<div class="ml-auto">  <a href="server.json">JSON</a> | 
+	<div class="ml-auto">  <a href="server.json.php">JSON </a> |  
 		<?php
 			$time = microtime();
 			$time = explode(' ', $time);
