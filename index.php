@@ -181,18 +181,6 @@ $sec = "300";
 											echo  $timeserver ;
 											echo " <small style='color: grey;'>  <i class='fas  fa-sun'></i> <span style='color: white;'> x ".$timespeed."</span> - <i class='fas  fa-moon'></i><span style='color: white;'> x ".$timespeedn."  </span>";
 
-
-/*								 
-								     if (count($objlower) == 0){      // if no mod
-									 echo $InfoGT[67].$InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72].$InfoGT[73];  
-									 echo " <small style='color: grey;'>  <i class='fas  fa-sun'></i> <span style='color: white;'> x ". $InfoGT[42]. "</span> - <i class='fas  fa-moon'></i><span style='color: white;'> x ".$InfoGT[55]."  </span>";											
-									   } 
-
-									 if (count($objlower) > 0)  {
-									  echo $InfoGT[67].$InfoGT[68].$InfoGT[69].$InfoGT[70].$InfoGT[71].$InfoGT[72].$InfoGT[73].$InfoGT[74];
-									  echo " <small style='color: grey;'> <i class='fas  fa-sun'></i> <span style='color: white;'> x ". $InfoGT[41].$InfoGT[42].$InfoGT[43]. "</span> - <i class='fas  fa-moon'></i><span style='color: white;'> x ".$InfoGT[54].$InfoGT[55].$InfoGT[56]."</span>";  
-				  					   }
-*/
 ?>
 
 														</small></h5>
@@ -211,26 +199,14 @@ $sec = "300";
 
 											<div class="col-md-2 col-xs-12 border-right">
 												<div class="description-block">
-													<h5 class="description-header"> <?php echo  $Info['Version'] ; ?></h5>
+													<h5 class="description-header"> <?php echo  $Info['Version']; ?></h5>
 													<span class="description-text">SERVER VERSION</span>
 												</div>
 											</div>
 											
 											<div class="col-md-2 col-xs-12">
 												<div class="description-block">
-											<h5 class="description-header">
-											  <?php  //echo count($objlower)
-												echo $hive ;
-/*                                           if (count($objlower) == 0){     
-											 echo $InfoGT[18].$InfoGT[19].$InfoGT[20].$InfoGT[21].$InfoGT[22].$InfoGT[23].$InfoGT[24].$InfoGT[25];
-											 }
-											 if (count($objlower) > 0){
-											 echo $InfoGT[18].$InfoGT[19].$InfoGT[20].$InfoGT[21].$InfoGT[22].$InfoGT[23].$InfoGT[24].$InfoGT[25];
-											}
-*/											
-											 ?>
-
-													</h5>
+											<h5 class="description-header"><?php   echo $hive; ?></h5>
 													<span class="description-text">HIVE</span>
 												</div>
 											</div>
@@ -396,7 +372,7 @@ $sec = "300";
                                                                                                                                                                         </label>
                                                                                                                                                                 </div>
                                                                                                                                                                 <div class="col-sm-7">
-                                                                                                                                                                        <i class="fa fa-user"> (..)</i>
+                                                                                                                                                                        <i class="fa fa-user"> <font color=orange></font></i>
                                                                                                                                                                 </div>
                                                                                                                                                         </div>
                                                                                                                                                 </div>
@@ -411,8 +387,8 @@ $sec = "300";
 																						<small>	From User</small-->
 																					</label>
 																				</div>
-																			<div class="col-sm-7"><i class="fas	fa-dot-circle"	style="color:#20a8d8"></i>
-																				  SQL not active <font color=orange></font>
+																			<div class="col-sm-7"><i class="fas fa-dot-circle" style="color:#20a8d8"></i>
+																				  <font color=orange></font>
 																				</div>
 																			</div>
 																		</div>

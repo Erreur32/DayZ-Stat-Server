@@ -8,7 +8,12 @@
 	$servport = "3201" ; // Game Server Port
 	$modport  = "3211" ; // Mod port omega (+10)
 	$queryport= "27001" ; // Queryport
-
+/*
+                $ipserv   = "103.58.149.102" ; // IP server game
+                $portserv = "2302" ; // Game Server Port
+		$modport  = "2312" ; // Mod port omega (+10)
+		$queryport= "27016" ; // Queryport 
+*/
 	$title    = "DayZ Stat SERVER Clan | by TOX" ; // Web title page
 	$descript = "Your Clan/server desciption";  // Your clan/server description 
 	$logoteam = "logoteam.png";
@@ -26,16 +31,19 @@
 // Don't touch below
 //
 
-        $urlserv = $ipserv.":".$servport ;
+        $urlserv = '$ipserv.":". $portserv' ;
         $json      = file_get_contents("http://".$ipserv.":".$modport."/"); // get info from server
-	if (!$json) {
-        //echo "The variable is not empty";
+
+//	if (!$json) {
+//echo "The variable is not empty";
+
         $objhigher = json_decode($json);  //converts to an object
-        $objlower  = $objhigher[0];       // if the json response its multidimensional this lowers it
+//        $objlower  = $objhigher[0];       // if the json response its multidimensional this lowers it
         $objlower  = json_decode($json);  //converts to an array of objects
-	} else {
-	 $mods      = "";
-	}
+
+//	} else {
+//	 $mods      = "";
+//	}
 
 
        // librarie SQ - info serv game
