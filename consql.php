@@ -8,7 +8,7 @@
         $userdb = "user";
         $pdb    = "pass";
         $dbname = "database";
-        $table  = "StatServer_1";
+        $table  = "StatServer_5";
 
 
 

@@ -508,12 +508,11 @@ $sec = "300";
 														    <?php if( !empty( $Players ) ): ?>
 															   <div class="card-header">List players online: <?php echo  $Info['Players'] ; ?></div>
 																<div class="card-body">
-                                                                                                                           													
+
 																<?php foreach( $Players as $Player ): ?>
 																<table>
         															<tr>
-                                                        									<td style="width:200px"> <span class="btn btn-large btn-primary">"Survivor" </span> </td>
-										    					        <td>&emsp; <span style='color:grey'>Playtime </span>>  <?php echo $Player[ 'TimeF' ]; ?> Minutes </td>
+                                          									<td style="width:200px"> <span class="btn btn-large btn-primary">"Survivor" </span> </td>									    					        <td>&emsp; <span style='color:grey'>Playtime </span>>  <?php echo $Player[ 'TimeF' ]; ?> Minutes </td>
 																</tr>
 																</table>
 

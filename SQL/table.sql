@@ -7,10 +7,6 @@ SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
 SET NAMES utf8mb4;
 
-DROP DATABASE IF EXISTS `dayzstat`;
-CREATE DATABASE `dayzstat` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-USE `dayzstat`;
-
 DROP TABLE IF EXISTS `StatServer_5`;
 CREATE TABLE `StatServer_5` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

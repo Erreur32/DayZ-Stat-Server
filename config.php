@@ -19,10 +19,17 @@
 
 	$title    = "DayZ Stat SERVER Clan | by TOX" ; // Web title page
 	$descript = "Your Clan/server desciption";  // Your clan/server description 
-//	$namemap  = "chernarusplus"; // choose between: chernarusplus / livonia / namalsk/
+	//	$namemap  = "chernarusplus"; // choose between: chernarusplus / livonia / namalsk/
 	$logoteam = "logoteam.png";
 	$imagemap = "chernarus.jpg";
 
+/*	
+	// set the default timezone to use. Available since PHP 5.1
+	//   https://www.php.net/manual/en/timezones.others.php
+	date_default_timezone_set('Etc/GMT-1');
+	//date_default_timezone_set('Europe/Paris');
+	//$date = date('Y-m-d H:i:s');
+*/
 	// Don't touch below
 
   //   Don't touch below (or you know what you do)
@@ -65,6 +72,42 @@
 
         $Timer = Number_Format( MicroTime( true ) - $Timer, 4, '.', '' );
         $InfoGT = $Info['GameTags'];
+
+
+
+
+        // DEBUG
+        /*
+        print_r($Info);
+        echo "<br><hr>";
+
+        echo "InfoGT: "       .$InfoGT     . "<br>";
+        echo "ModDesc: "      .$Info['ModDesc']    . "<br>";
+        echo "Hostname: "     .$Info['HostName']   . "<br>";
+        echo "Players: "      .$Info['Players']    . "<br>";
+        echo "MaxPlayers: "   .$Info['MaxPlayers'] . "<br>";
+        echo "Secure: "       .$Info['Secure']     . "<br>";
+        echo "Map: "          .$Info['Map']        . "<br>";
+        echo "Os: "           .$Info['Os']         . "<br>";
+        echo "Version: "      .$Info['Version']    . "<br>";
+        echo "Port: "         .$Info['GamePort']       . "<br>";
+        echo "GameID: "         .$Info['GameID']       . "<br>";
+        echo "<hr>test SQL";
+        */
+
+        // Variables
+        $HostName   = $Info['HostName']   ;
+        $Game       = $Info['ModDesc'] ;
+        $Version    = $Info['Version'] ;
+        $PLayers    = $Info['Players'];
+        $MaxPlayers = $Info['MaxPlayers'] ;
+        $Secure     = $Info['Secure'] ;
+        $Map        = $Info['Map'];
+        $Os         = $Info['Os'] ;
+        $GamePort   = $Info['GamePort'] ;
+        $GameID     = $Info['GameID'] ;
+        $ping       = "666";
+//      $mods       = "0";
 
 ?>
 
