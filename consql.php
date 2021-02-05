@@ -5,12 +5,18 @@
 
 
         $servdb = "localhost";
+        $userdb = "dayz";
+        $pdb    = "dayz32";
+        $dbname = "dayzstat";
+        $table  = "StatServer_5"; 
+		
+/*
+        $servdb = "localhost";
         $userdb = "user";
         $pdb    = "pass";
         $dbname = "database";
-        $table  = "StatServer_5";
-
-
+        $table  = "StatServer_1";
+*/
 
       $StatServer = $table;
       $con = new mysqli($servdb, $userdb, $pdb, $dbname);

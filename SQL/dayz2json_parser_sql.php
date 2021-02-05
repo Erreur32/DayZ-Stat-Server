@@ -4,10 +4,10 @@ include_once('./config.php');
 include_once('./consql.php');
 
  // set the default timezone to use. Available since PHP 5.1
- //   https://www.php.net/manual/en/timezones.others.php
+ // https://www.php.net/manual/en/timezones.others.php
    date_default_timezone_set('Etc/GMT-1');
  //date_default_timezone_set('Europe/Paris');
- $date = date('Y-m-d H:i:s');
+   $date = date('Y-m-d H:i:s');
 
 // if server down update sql
 if (empty($Info['HostName']))  {
@@ -33,45 +33,51 @@ $insql = "INSERT INTO $table (date,name,players,maxplayers,map,game,version,time
    }
 
 mysqli_close($con);
-//exit ;
 } else {
 
-// REGEX TIME
+// REGEX TIME let's go :)
+
+// time server
 $regtimsev  = "/[0-9]{1,2}[:][0-9]{1,2}/";
 $result     =  preg_grep($regtimsev, explode(",", $InfoGT));
-$timeserver =  $result[8];
+ foreach ($result as $key => $val) {
+ $timeserver = $val; 
+}
 
-$regtimeacd = "/([0-9][.][0-9]{1})/";
-$result     =  preg_grep($regtimeacd, explode(",", $InfoGT));
-$timespeed  =  $result[5];
+// speedtime dayz
+$regtimeacc = "/etm[0-9]{1,2}[.][0-9]{1}/";
+$result     =  preg_grep($regtimeacc, explode(",", $InfoGT));
+ foreach ($result as $key => $val) { $timespeed = trim($val,"entm.0"); }
 
-$regtimeacn = "/([0-9][.][0-9]{1})/";
+// speedtime night
+$regtimeacn = "/entm[0-9]{1,2}[.][0-9]{1}/";
 $result     =  preg_grep($regtimeacn, explode(",", $InfoGT));
-$timespeedn =  $result[6];
+ foreach ($result as $key => $val) { $timespeedn = trim($val,"entm.0"); }
 
 // HIVE
 $reghive   = '/[^,]...(Hive)/';
 $result    =  preg_grep($reghive, explode(",", $InfoGT));
-$hive      =  $result[2];
+ foreach ($result as $key => $val) { $hive = $val; }
 
-// battleye check
+// battleye
 $regbattle = "/(battleye)/";
 $result    =  preg_grep($regbattle, explode(",", $InfoGT));
-$battleye  =  $result[0];
+ foreach ($result as $key => $val) { $battleye  = $val; }
 
-// DEBUG
-$timespeed="2";
-$timespeedn="4";
+// mod 
+$regmod = "/(mod)/";
+$result =  preg_grep($regmod, explode(",", $InfoGT));
+ foreach ($result as $key => $val) { $mods = $val; }
+
 
 // SQL insert Query.
 $insql = "INSERT INTO $table (date,name,players,maxplayers,map,game,version,timeserver,timespeed,timespeedn,mods,battleye,hive,connect,secure,ping) VALUES ('$date','$HostName','$PLayers','$MaxPlayers','$Map','$Game','$Version','$timeserver','$timespeed','$timespeedn','$mods','$battleye','$hive','$urlserv','$Secure','$ping')";
 
 // Check if errors with SQL query
 if (mysqli_query($con, $insql)) {
- // echo "New record created successfully";
-} else {
-  echo "Error: " . $insql . "<br>" . mysqli_error($con);
-}
+// DEBUG
+//   echo "New record created successfully";    echo $insql;
+ } else {   echo "Error: " . $insql . "<br>" . mysqli_error($con); }
 
 mysqli_close($con);
 }
