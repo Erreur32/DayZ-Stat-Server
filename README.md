@@ -1,18 +1,20 @@
-## Hi Dayz Survivor !!
+##  Hi  Survivor !
+ ☠   [TEAM DayZ](https://dayz.echosystem.fr) 🆃🅾🆇  
+
+Presents
 
 
-## 🔥 TEAM DayZ 🆃🅾🆇 ☠ 
 
-![https://dayz.echosystem.fr](https://git.echosystem.fr/repo-avatars/191)
-
-     ☠  TEAM DayZ 🆃🅾🆇 https://dayz.echosystem.fr ☠ 
-
-
-#  Simple live Stat for Dayz Standalone server.
+#  📈 Simple live Stat for Dayz Standalone server.
    Inspired by Omega namager template.
    >  *The [OmegaManager](https://cftools.de/) is a local application to run your DayZ servers. It automatically deploys, runs, watches, restarts and updates your server.*
 
    This page will show your **DayZ server live stat**. It's working with directly on editing **config.php** file and if you have crontab and sql you can have some graph.
+
+
+
+> [example live page](https://dayz.echosystem.fr/git-DayZ-server-stat/)
+
 
 ## Installation
 
@@ -126,9 +128,9 @@ ENJOY :)
 > [example live page](https://dayz.echosystem.fr/git-DayZ-server-stat/)
 
 
+# Author : Erreur32
 
+![https://dayz.echosystem.fr](https://git.echosystem.fr/repo-avatars/191)
 
-
------
 Website: [dayz.echosystem.fr](https://dayz.echosystem.fr)
-Author : Erreur32
+
