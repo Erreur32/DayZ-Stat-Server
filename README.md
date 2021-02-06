@@ -1,7 +1,7 @@
 ## Hi Dayz Survivor !!
 
 
-## 🔥 STILL in Development
+## 🔥 TEAM DayZ 🆃🅾🆇 ☠ 
 
 ![https://dayz.echosystem.fr](https://git.echosystem.fr/repo-avatars/191)
 
@@ -29,7 +29,9 @@
 ### #2 Configuration Required
 
  -  Set the *config.php* file in *config* directory  and fill your `ip` , `port` , `query` and `omega server port mod`.
-
+ 
+    >       ### edit config/config.php
+    >       
     >         $ipserv   = "6.6.6.6"; // IP server game
     >         $portserv = "2302" ;   // Game Server Port
     >         $modport  = "2312" ;   // Mod port omega (+10)
@@ -111,6 +113,7 @@ ENJOY :)
 ### Library used:
 
 >  [PHP-Source-Query](https://github.com/xPaw/PHP-Source-Query) -     PHP library to query servers that implement Steam query protocol (also known as Source Engine Query protocol) 
+>  
 >  Morris  -   library for graph
  
  
