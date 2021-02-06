@@ -2,8 +2,8 @@
 
 //ini_set('display_errors', 'on');
 
-include('./consql.php');
-include_once('config.php');
+include_once('SQL/consql.php');
+include_once('SQL/config.php');
 
 // MYSQL table
 // $StatServer = "StatServer_20"; // set in consql.php
