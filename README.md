@@ -24,8 +24,10 @@ Presents
  - Download lastest archive https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/archive/0.32.zip
    
 
-    >           ## or Use the lastest version with git 
-    >              git clone https://git.echosystem.fr/Erreur32/DayZ-Stat-Server.git 
+#### or Use the lastest version with git 
+
+  >   
+        git clone https://git.echosystem.fr/Erreur32/DayZ-Stat-Server.git 
 
  
 
@@ -33,12 +35,13 @@ Presents
 
  -  Set the *config.php* file in *config* directory  and fill your `ip` , `port` , `query` and `omega server port mod`.
  
-    >       ### edit config/config.php
-    >       
-    >         $ipserv   = "6.6.6.6"; // IP server game
-    >         $portserv = "2302" ;   // Game Server Port
-    >         $modport  = "2312" ;   // Mod port omega (+10)
-    >         $queryport= "27016";   // Queryport
+#### edit config/config.php
+ 
+ >
+         $ipserv   = "6.6.6.6"; // IP server game
+         $portserv = "2302" ;   // Game Server Port
+         $modport  = "2312" ;   // Mod port omega (+10)
+         $queryport= "27016";   // Queryport
  
  - Omega manager (to check list mod only, but higly suggered !) 
 
@@ -48,42 +51,43 @@ Presents
  - mysql database (to store status server for graph) 
      Create `dayzstat` database first + user privilege.  Checkout Schema database in SQL/table.sql
 
-    >       ### edit config/consql.php
+#### edit config/consql.php
 
-    >         -- Adminer 4.7.8 MySQL dump
-    > 
-    >         SET NAMES utf8;
-    >         SET foreign_key_checks = 0;
-    >         SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
-    > 
-    >         SET NAMES utf8mb4;
-    > 
-    >         CREATE TABLE `StatServer_5` (
-    >           `id` int(11) NOT NULL AUTO_INCREMENT,
-    >           `date` datetime DEFAULT NULL ON UPDATE current_timestamp(),
-    >           `name` varchar(74) NOT NULL DEFAULT 'Offline',
-    >           `players` varchar(32) NOT NULL DEFAULT '0',
-    >           `maxplayers` varchar(4) DEFAULT NULL,
-    >           `map` varchar(19) DEFAULT NULL,
-    >           `game` varchar(4) DEFAULT NULL,
-    >           `version` varchar(15) DEFAULT NULL,
-    >           `timeserver` varchar(12) DEFAULT NULL,
-    >           `timespeed` varchar(5) DEFAULT NULL,
-    >           `timespeedn` varchar(5) DEFAULT NULL,
-    >           `mod` varchar(5) DEFAULT NULL,
-    >           `battleye` tinytext DEFAULT NULL,
-    >           `hive` varchar(11) DEFAULT NULL,
-    >           `connect` varchar(32) DEFAULT NULL,
-    >           `secure` tinytext DEFAULT NULL,
-    >           `ping` varchar(3) DEFAULT '0',
-    >           PRIMARY KEY (`id`),
-    >           KEY `timeserver` (`timeserver`),
-    >           KEY `date` (`date`)
-    >         ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-    > 
-    > 
-    >         -- 2021-02-05 10:22:08
-    > 
+ >
+>              -- Adminer 4.7.8 MySQL dump
+>              
+>              SET NAMES utf8;
+>              SET foreign_key_checks = 0;
+>              SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+>      
+>              SET NAMES utf8mb4;
+>      
+>              CREATE TABLE `StatServer_5` (
+>                `id` int(11) NOT NULL AUTO_INCREMENT,
+>                `date` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+>                `name` varchar(74) NOT NULL DEFAULT 'Offline',
+>                `players` varchar(32) NOT NULL DEFAULT '0',
+>                `maxplayers` varchar(4) DEFAULT NULL,
+>                `map` varchar(19) DEFAULT NULL,
+>                `game` varchar(4) DEFAULT NULL,
+>                `version` varchar(15) DEFAULT NULL,
+>                `timeserver` varchar(12) DEFAULT NULL,
+>                `timespeed` varchar(5) DEFAULT NULL,
+>                `timespeedn` varchar(5) DEFAULT NULL,
+>                `mod` varchar(5) DEFAULT NULL,
+>                `battleye` tinytext DEFAULT NULL,
+>                `hive` varchar(11) DEFAULT NULL,
+>                `connect` varchar(32) DEFAULT NULL,
+>                `secure` tinytext DEFAULT NULL,
+>                `ping` varchar(3) DEFAULT '0',
+>                PRIMARY KEY (`id`),
+>                KEY `timeserver` (`timeserver`),
+>                KEY `date` (`date`)
+>              ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+>      
+>      
+>              -- 2021-02-05 10:22:08
+     
 
  - **2 Differents way for your crontab** with Shell or php (recommended). 
 
@@ -117,15 +121,16 @@ ENJOY :)
 
 ### Library used:
 
+>
 >  [PHP-Source-Query](https://github.com/xPaw/PHP-Source-Query) -     PHP library to query servers that implement Steam query protocol (also known as Source Engine Query protocol) 
 >  
->  Morris  -   library for graph
+>  [Morris](https://morrisjs.github.io/morris.js/)              -     PHP library to generate graph.
  
  
 
 ### sample:
 
-> [example live page](https://dayz.echosystem.fr/git-DayZ-server-stat/)
+>   [example live page](https://dayz.echosystem.fr/git-DayZ-server-stat/)
 
 
 # Author : Erreur32
