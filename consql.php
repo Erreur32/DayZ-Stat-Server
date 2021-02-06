@@ -5,6 +5,7 @@
 
 // Edit this bloc for SQL
 
+
         $servdb = "localhost";
         $userdb = "user";
         $pdb    = "pass";

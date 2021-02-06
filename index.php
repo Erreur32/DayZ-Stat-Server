@@ -588,10 +588,9 @@ $sec = "300";
                                                                                                         <div class="card">
                                                                                                                 <div class="card-header" style="padding: 15px;"> <i class="fas fa-map"></i>  MAP <span style='color: grey;'><?php  echo $Info['Map']; ?></span> </div>
                                	                                                      <!--a href=""--> <div  style="width:100%;height:620px;">
-												<iframe src="https://dayz.ginfo.gg/<?php echo $namemap; ?>/#c=37;-4;3" frameborder="0" allowfullscreen style="width:100%;height:600px;" security="restricted"></iframe>
-
-											<!--img src="imagemap.jpg" style="width:100%;max-width:1200px;height:auto;padding:5px;" class="arrondie2" -->
-												</div>
+												<iframe src="https://dayz.ginfo.gg/<?php echo $Info['Map']; ?>/#c=37;-4;3" frameborder="0" allowfullscreen style="width:100%;height:600px;" security="restricted"></iframe>
+												<!--img src="imagemap.jpg" style="width:100%;max-width:1200px;height:auto;padding:5px;" class="arrondie2" -->
+												       </div>
 											<!--/a-->
                                                                                                         </div>
                                                                                                 </div>
