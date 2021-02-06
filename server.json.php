@@ -4,7 +4,10 @@
 // MAKE json
 
 //header("Content-Type: application/json; charset=UTF-8; pageEncoding=UTF-8");
-include_once('config.php');
+
+ include_once('config/config.php');
+// include_once('config/consql.php');
+
 
 /*
 $out = array_values($Info);

@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL); // Display all types of error
 //set_time_limit ( 4 );      // Max execution time is set to 4 seconds
 
-include_once('../config.php');
+include_once('config.php');
 
 // print json server
 echo "<pre>";

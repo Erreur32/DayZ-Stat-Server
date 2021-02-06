@@ -7,8 +7,9 @@ $sec = "300";
 //ini_set('display_errors', 'on');
 //error_reporting(E_ALL); // Display all types of error
 
- include_once('SQL/consql.php');
- include_once('SQL/config.php');
+
+ include_once('config/config.php');
+ include_once('config/consql.php');
 
 ?>
 
