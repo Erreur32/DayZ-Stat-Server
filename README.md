@@ -28,7 +28,7 @@
 
 ### #2 Configuration Required
 
- -  Set the *config.php* file and fill your `ip` , `port` , `query` and `omega server port mod`.
+ -  Set the *config.php* file in *config* directory  and fill your `ip` , `port` , `query` and `omega server port mod`.
 
     >         $ipserv   = "6.6.6.6"; // IP server game
     >         $portserv = "2302" ;   // Game Server Port
@@ -78,17 +78,17 @@
 >         -- 2021-02-05 10:22:08
 > 
 
- - **2 Differents way for your crontab** with Shell or php. Put *statserver_json.sh* in your crontab for mysql insert & creation of json file. 
+ - **2 Differents way for your crontab** with Shell or php (recommended). 
 
 ### #4 Crontab to fill Database.
 
 >#### For Shell (SQL insert + json)
->       */5 * * * *       /usr/sbin/sh /pathto/SQL/statserver_json.sh  2>&1
+>       */5 * * * *       /usr/sbin/sh /pathto/config/statserver_json.sh  2>&1
     
  OR (recommended)
 
 >#### For php (SQL insert)
->      */5 * * * *       /usr/local/bin/php -f /your/path/SQL/dayz2json_parser_sql.php 2>&1
+>      */5 * * * *       /usr/local/bin/php -f /yourpath.../config/dayz2json_parser_sql.php 2>&1
 
 
   Check your time zone here. https://www.php.net/manual/en/timezones.others.php and adapt in dayz2json_parser_sql.php.

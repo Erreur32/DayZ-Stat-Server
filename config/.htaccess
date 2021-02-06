@@ -1,0 +1,6 @@
+Options -Indexes
+order allow,deny
+deny from all
+
+RewriteCond %{THE_REQUEST} /
+RewriteRule ^ - [F,L]
