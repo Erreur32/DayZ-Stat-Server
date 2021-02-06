@@ -6,7 +6,8 @@ Presents
 
 
 #  📈 Simple live Stat for Dayz Standalone server.
-   Inspired by Omega namager template.
+   Inspired by the *Excelent* __Omega manager__.
+   
    >  *The [OmegaManager](https://cftools.de/) is a local application to run your DayZ servers. It automatically deploys, runs, watches, restarts and updates your server.*
 
    This page will show your **DayZ server live stat**. It's working with directly on editing **config.php** file and if you have crontab and sql you can have some graph.
@@ -93,14 +94,14 @@ Presents
 
 ### #4 Crontab to fill Database.
 
-    >#### For Shell (SQL insert + json)
-    >       */5 * * * *       /usr/sbin/sh /pathto/config/statserver_json.sh   &>/dev/null
+> #### For Shell (SQL insert + json)
+>            */5 * * * *       /usr/sbin/sh /pathto/config/statserver_json.sh   &>/dev/null
     
  OR (recommended)
 
-    >#### For php (SQL insert)
-    >      */5 * * * *       /usr/local/bin/php -f /yourpath.../config/dayz2json_parser_sql.php  &>/dev/null
-    > tips change  *&>/dev/null* to *2>&1* to know what is going on, maybe spam your mail log.
+> #### For php (SQL insert)
+>           */5 * * * *       /usr/local/bin/php -f /yourpath.../config/dayz2json_parser_sql.php  &>/dev/null
+>      tips change  *&>/dev/null* to *2>&1* to know what is going on, maybe spam your mail log.
 
 
   Check your time zone here. https://www.php.net/manual/en/timezones.others.php and adapt in dayz2json_parser_sql.php.
