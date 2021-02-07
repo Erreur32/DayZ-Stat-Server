@@ -5,11 +5,12 @@
 
 // Edit this bloc for SQL
 
-        $servdb = "localhost";
-        $userdb = "user";
-        $pdb    = "pass";
-        $dbname = "database";
-        $table  = "StatServer_1";
+	$servdb = "localhost";
+        $userdb = "";
+        $pdb    = "";
+        $dbname = "dayzstat";
+        $table  = "StatServer_1"; 
+
 
 // Don't edit below !
 
