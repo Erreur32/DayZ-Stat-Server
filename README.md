@@ -101,10 +101,12 @@
 
 > #### For php (SQL insert)
 >           */5 * * * *       /usr/local/bin/php -f /yourpath.../config/dayz2json_parser_sql.php  &>/dev/null
->      tips change  *&>/dev/null* to *2>&1* to know what is going on, maybe spam your mail log.
+>           
+
+ tips change  __&>/dev/null__ to __2>&1__ to know what is going on, maybe spam your mail log.
 
 
-  Check your time zone here. https://www.php.net/manual/en/timezones.others.php and adapt in dayz2json_parser_sql.php.
+Check your time zone here. https://www.php.net/manual/en/timezones.others.php and adapt in dayz2json_parser_sql.php.
 
 
 ## Et Voilà ! 
