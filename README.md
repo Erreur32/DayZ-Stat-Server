@@ -1,7 +1,7 @@
-##  Hi  Survivor !
- ☠   [TEAM DayZ](https://dayz.echosystem.fr) 🆃🅾🆇  
+# ☠   [TEAM DayZ](https://dayz.echosystem.fr) (-🆃🅾🆇-)
 
 ### Presents
+
 
 ![](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/img/DayZStats.png)
 
