@@ -1,9 +1,9 @@
 ##  Hi  Survivor !
  ☠   [TEAM DayZ](https://dayz.echosystem.fr) 🆃🅾🆇  
 
-Presents
+### Presents
 
-
+![](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/DayZStats1.png)
 
 #  📈 Simple live Stat for Dayz Standalone server.
    Inspired by the *Excelent* __Omega manager__.
@@ -136,7 +136,7 @@ ENJOY :)
 
 # Author : Erreur32
 
-![https://dayz.echosystem.fr](https://git.echosystem.fr/repo-avatars/191)
+![https://dayz.echosystem.fr](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/DayZStats1.png)
 
 Website: [dayz.echosystem.fr](https://dayz.echosystem.fr)
 
