@@ -28,50 +28,15 @@ $sec = "300";
 	<link id="theme-style" href="css/style_dark.css" rel="stylesheet">
 
 	<style>
-		.tab-content {
-			margin-top: -1px;
-			background: #3a4149;
-			border: none;
-			border-radius: 0 0 .25rem .25rem;
-		}
-
-		a,
-		a:visited {
-			color: #20A8D8;
-			text-decoration: none;
-		}
-
-		a:hover {
-			color: orange;
-			text-decoration: none;
-		}
-
-		.description-header {
-			color: #26A65B;
-		}
-
-		.label-danger {
-			background-color: #EF4836;
-		}
-
-		.label-warning {
-			background-color: #F89406;
-			color: white;
-		}
-
-		.label-success {
-			background-color: #26A65B;
-		}
-
-		.label-primary {
-			background-color: #4183D7;
-			color: green;
-		}
-
-		.label-info {
-			background-color: #5bc0de;
-		}
-
+		.tab-content {margin-top: -1px;	background: #3a4149;border: none;border-radius: 0 0 .25rem .25rem;}
+		a,a:visited {color: #20A8D8;text-decoration: none;}
+		a:hover {color: orange;	text-decoration: none;}
+		.description-header {color: #26A65B;}
+		.label-danger {	background-color: #EF4836;}
+		.label-warning {background-color: #F89406;color: white;	}
+		.label-success {background-color: #26A65B;}
+		.label-primary {background-color: #4183D7;color: green;	}
+		.label-info {	background-color: #5bc0de;}
 		.label {
 			display: inline;
 			padding: .2em .6em .3em;
@@ -84,18 +49,12 @@ $sec = "300";
 			vertical-align: baseline;
 			border-radius: .25em;
 		}
-
-		.selection {			color: black !important;		}
-
-		.select2-results {			color: black !important;		}
-
-		.select2-results__option--highlighted {			background-color: #3875d7 !important;		}
-
-		.pull-left {			float: left !important;		}
-
-		.pull-right {			float: right !important;		}
-
-		.navbar-brand-logo {			margin-left: 2rem;		}
+		.selection {	color: black !important;}
+		.select2-results { color: black !important;}
+		.select2-results__option--highlighted {	background-color: #3875d7 !important;}
+		.pull-left { float: left !important;}
+		.pull-right { float: right !important;}
+		.navbar-brand-logo { margin-left: 2rem;}
 	</style>
 
 
@@ -109,12 +68,12 @@ $sec = "300";
         $Info['HostName'] = "<h1>OFF LINE</h1>" ;
         }
 ?> 
-		<main class="main" style="margin-top: 10px">
 
-			<!-- Breadcrumb-->
-			<ol class=""></ol>
+	<main class="main" style="margin-top: 10px">
+			<!-- Breadcrumb 	<ol class=""></ol>-->
 
 			<div class="container-fluid">
+				<center><img height="" width=""  src="img/DayZStats.png"></center>
 				<div id="ui-view">
 
 					<div class="animated fadeIn">
@@ -137,13 +96,13 @@ $sec = "300";
 
 <?php
 	        if (empty($Info['Map']))  {
-				echo "</main>";
+		echo "</main>";
 
-				// change to our local zone !!
+		// change to our local zone !!
                 setlocale(LC_ALL,'french');
 
-				echo "<center><small class='text-muted'>Last refresh</small> <br>  <strong class='h4'>".date('m/d/y H:i:s')."</strong></center>";
-                echo "<div style=\"padding-bottom: 10%;padding-left: 20%;padding-right: 20%\"> <center><img src=".$logoteam." class=\"arrondie2\"   width=\"100%\" max-height=\"20%\" height=\"auto\"></center></div></div>";
+		echo "<center><small class='text-muted'>Last refresh</small> <br>  <strong class='h4'>".date('m/d/y H:i:s')."</strong></center>";
+                echo "<div style=\"padding-bottom: 10%;padding-left: 20%;padding-right: 20%\"> <center><img src=img/".$logoteam." class=\"arrondie2\"   width=\"100%\" max-height=\"20%\" height=\"auto\"></center></div></div>";
                 exit;
                 }
 ?>
@@ -154,7 +113,7 @@ $sec = "300";
 												<div class="description-block">
 													<h5 class="description-header">
 													 <?php if (empty($Info['Players'])) { echo "<span style='color:grey;'>"; } ?>
-                                                     <?php echo $Info['Players']; ?> <span style='color:grey;'>/<?php echo $Info['MaxPlayers'] ; ?></span></span>
+							                                                 <?php echo $Info['Players']; ?> <span style='color:grey;'>/<?php echo $Info['MaxPlayers'] ; ?></span></span>
 													</h5>
 													   <span class="description-text">PLAYERS</span>
 												</div>
@@ -180,7 +139,7 @@ $sec = "300";
 													<h5 class="description-header">
 										<?php  //echo count($modnum)
 											echo  $timeserver ;
-											echo " <small style='color: grey;'>  <i class='fas  fa-sun'></i> <span style='color: white;'> x ".$timespeed."</span> - <i class='fas  fa-moon'></i><span style='color: white;'> x ".$timespeedn."  </span>";
+											echo " <small style='color: grey;'><i class='fas fa-sun'></i><span style='color: white;'>x".$timespeed."</span> - <i class='fas  fa-moon'></i><span style='color: white;'>x".$timespeedn."  </span>";
 
 ?>
 
@@ -237,12 +196,13 @@ $sec = "300";
 												<i class="fas	fa-server"></i> MOD List</a>
 											</li>											
 											<li class="nav-item">
-                                                <a class="nav-link" id="userdata-tab"  data-toggle="tab" href="#userdata" role="tab" aria-controls="userdata" aria-selected="false">
-                                            <i class="fas fa-user-check"></i> User  Database</a>
-                                            </li>
-											<li class="nav-item"> <a class="nav-link" id="map-tab" data-toggle="tab"  href="#maptab" role="tab" aria-controls="maptab" aria-selected="false">
-                                                 <i class="fas fa-map"></i>  MAP</a>
-                                            </li>
+                                						                <a class="nav-link" id="userdata-tab"  data-toggle="tab" href="#userdata" role="tab" aria-controls="userdata" aria-selected="false">
+						                	                        <i class="fas fa-user-check"></i> User  Database</a>
+						                                         </li>
+											<li class="nav-item">
+												 <a class="nav-link" id="map-tab" data-toggle="tab"  href="#maptab" role="tab" aria-controls="maptab" aria-selected="false">
+                                                						 <i class="fas fa-map"></i>  MAP</a>
+						                                        </li>
 										</ul>
 
 										<div class="tab-content content_wrapper" id="tabs">
@@ -251,12 +211,12 @@ $sec = "300";
 											<div class="tab-pane fade tab_content active show" id="overview" role="tabpanel" aria-labelledby="overview-tab">
 
 												<div class="row" style="margin-left: 30px;">
-
 													 <div class="col-lg-2 col-sm-5">
-                                                            <div class="callout callout-dark" style="padding:0">
-															 <img src="<?php echo $imagemap; ?>" class="arrondie2" height="50px"  width="150px">
-															  </div>
-                                                     </div>
+						                                                         <div class="callout callout-dark" style="padding:0">
+													 <img src="img/<?php echo $imagemap;?>" class="arrondie2" height="50px"  width="150px">
+													
+											       </div>
+				                                                     </div>
 	
 													<div class="col-lg-2 col-sm-5">
 														<div class="callout callout-light">
@@ -302,7 +262,7 @@ $sec = "300";
 															<small class="text-muted">Bans</small>
 															<br> <strong class="h4"  style="color: #F86C6B">0</strong>
 															<div class="chart-wrapper">
-                                                              <canvas id="sparkline-chart-1" width="100"  height="30"></canvas>
+								                                                        <canvas id="sparkline-chart-1" width="100"  height="30"></canvas>
                                                             </div>
 														</div>
 													</div>
@@ -506,7 +466,7 @@ $sec = "300";
 																<p class="before-list">
 																	<center>
 																		<span style="padding: 5px 0px 2px 20px;"><?php echo count($modnum); ?>   MODS	</span>
-																		<span style="padding: 5px 0px 2px 20px;">IP:	<span style="color: orange;"><?php echo  $urlserv; ?>	</span></span>
+																		<span style="padding: 5px 0px 2px 20px;">IP:	<a href="http://<?php echo $ipserv.":".$modport;?>"><span style="color: orange;"><?php echo $ipserv.":".$modport;?></span></a></span>
 																	</center>
 																</p>
 
@@ -590,7 +550,7 @@ $sec = "300";
                                                                                                                 <div class="card-header" style="padding: 15px;"> <i class="fas fa-map"></i>  MAP <span style='color: grey;'><?php  echo $Info['Map']; ?></span> </div>
                                	                                                      <!--a href=""--> <div  style="width:100%;height:620px;">
 												<iframe src="https://dayz.ginfo.gg/<?php echo $Info['Map']; ?>/#c=37;-4;3" frameborder="0" allowfullscreen style="width:100%;height:600px;" security="restricted"></iframe>
-												<!--img src="imagemap.jpg" style="width:100%;max-width:1200px;height:auto;padding:5px;" class="arrondie2" -->
+												<!--img src="img/imagemap.jpg" style="width:100%;max-width:1200px;height:auto;padding:5px;" class="arrondie2" -->
 												       </div>
 											<!--/a-->
                                                                                                         </div>

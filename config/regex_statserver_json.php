@@ -10,6 +10,7 @@ echo "<pre>";
 print_r($Info);
 echo "</pre>";
 
+
 //  test  REGEX
 echo "<h1>RESULAT parser JSON  </h1><code>";
 echo "Hostname: "     .$HostName   . "<br>";
@@ -119,6 +120,9 @@ echo "<br>";
 $output = implode(",", array($InfoGT));
 echo $output;
 
+echo "<br><hr>";
+echo "<h1>get_defined_vars() </h1>";
+echo '<pre><code>' . print_r(get_defined_vars(), true) . '</code></pre>';
 
 ?>
 
