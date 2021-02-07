@@ -3,7 +3,7 @@
 
 ### Presents
 
-![](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/DayZStats1.png)
+![](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/img/DayZStats.png)
 
 #  📈 Simple live Stat for Dayz Standalone server.
    Inspired by the *Excelent* __Omega manager__.
@@ -138,7 +138,7 @@ ENJOY :)
 ![https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/asset/Screenshot_2021-02-07.png](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/asset/Screenshot_2021-02-07.png)
 # Author : Erreur32
 
-![https://dayz.echosystem.fr](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/DayZStats1.png)
+![https://dayz.echosystem.fr](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/img/DayZStats.png)
 
 Website: [dayz.echosystem.fr](https://dayz.echosystem.fr)
 
