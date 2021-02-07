@@ -133,7 +133,7 @@ ENJOY :)
 
 >   [example live page](https://dayz.echosystem.fr/git-DayZ-server-stat/)
 
-
+![https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/asset/Screenshot_2021-02-07.png](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/asset/Screenshot_2021-02-07.png)
 # Author : Erreur32
 
 ![https://dayz.echosystem.fr](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/DayZStats1.png)
