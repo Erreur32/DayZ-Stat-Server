@@ -94,13 +94,8 @@
 
 ### #4 Crontab to fill Database.
 
-> #### For Shell (SQL insert + json)
->            */5 * * * *       /usr/sbin/sh /pathto/config/statserver_json.sh   &>/dev/null
-    
- OR (recommended)
-
 > #### For php (SQL insert)
->           */5 * * * *       /usr/local/bin/php -f /yourpath.../config/dayz2json_parser_sql.php  &>/dev/null
+>           */5 * * * *       php -f /yourpath.../config/dayz2json_parser_sql.php  &>/dev/null
 >           
 
  tips change  __&>/dev/null__ to __2>&1__ to know what is going on, maybe spam your mail log.
