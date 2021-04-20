@@ -14,7 +14,7 @@
 
 
 
-> [example live page](https://dayz.echosystem.fr/git-DayZ-server-stat/)
+> [example live page](https://dayz.echosystem.fr/)
 
 
 ## Installation
