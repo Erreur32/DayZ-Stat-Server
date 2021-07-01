@@ -10,10 +10,14 @@
   <a href=""><img alt="" src="" /></a>
   <a href=""><img alt="" src="" /></a>
 </p>
-
-<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/Erreur32/DayZ-Stat-Server?label=release&logo=DocuSign&logoColor=%23fff&style=for-the-badge">
+ <p align="center">
+  <a href="https://github.com/Erreur32/DayZ-Stat-Server/tag">
 <img alt="GitHub tag (latest by date)"     src="https://img.shields.io/github/v/tag/Erreur32/DayZ-Stat-Server">
-
+  </a>
+  <a href=""><img alt="" src="" /></a>
+  <a href=""><img alt="" src="" /></a>
+</p>
+ 
 ![](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/img/DayZStats.png)
 
 #  📈 Simple live Stat for Dayz Standalone server.
