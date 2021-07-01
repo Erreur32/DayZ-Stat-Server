@@ -11,6 +11,7 @@
   <a href=""><img alt="" src="" /></a>
 </p>
 
+<img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/Erreur32/DayZ-Stat-Server">
 
 ![](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/img/DayZStats.png)
 
