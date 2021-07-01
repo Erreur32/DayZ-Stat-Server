@@ -11,7 +11,7 @@
   <a href=""><img alt="" src="" /></a>
 </p>
  <p align="center">
-  <a href="https://github.com/Erreur32/DayZ-Stat-Server/tag">
+  <a href="https://github.com/Erreur32/DayZ-Stat-Server/tags">
 <img alt="GitHub tag (latest by date)"     src="https://img.shields.io/github/v/tag/Erreur32/DayZ-Stat-Server">
   </a>
   <a href=""><img alt="" src="" /></a>
