@@ -3,6 +3,15 @@
 ### Presents
 
 
+ <p align="center">
+  <a href="https://github.com/Erreur32/DayZ-Stat-Server/releases">
+    <img alt="Releases" src="https://img.shields.io/github/v/release/Erreur32/DayZ-Stat-Server?label=release&logo=DocuSign&logoColor=%23fff&style=for-the-badge" />
+  </a>
+  <a href=""><img alt="" src="" /></a>
+  <a href=""><img alt="" src="" /></a>
+</p>
+
+
 ![](https://git.echosystem.fr/Erreur32/DayZ-Stat-Server/raw/master/img/DayZStats.png)
 
 #  📈 Simple live Stat for Dayz Standalone server.
